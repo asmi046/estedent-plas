@@ -1,0 +1,33 @@
+@import '_vars.scss';
+
+.main_menu {
+    width: 100%;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    li {
+        flex-grow: 1;
+        padding: 0 20px;
+    }
+
+    a {
+        display: block;
+
+        text-align: center;
+        text-decoration: none;
+        color: $black_color;
+        font-family: $head_fonts;
+        font-size: 18px;
+        transition: $main_transition;
+
+        &:hover {
+            color: $main_color;
+        }
+    }
+}
