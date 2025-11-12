@@ -8,6 +8,7 @@ register();
 class MainBannerSwiper {
     constructor() {
         this.init();
+        console.log('MainBannerSwiper initialized');
     }
 
     init() {

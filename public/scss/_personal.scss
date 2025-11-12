@@ -1,0 +1,45 @@
+@use 'vars' as *;
+
+.personal {
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    &_card {
+        border: 1px solid $main_color;
+        border-top-left-radius: 50px;
+        overflow: hidden;
+
+        &_img {
+            height: 410px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &_text {
+            padding: 30px;
+
+            h3 {
+                font-size: 22px;
+                font-weight: 700;
+                color: $main_color;
+                margin-bottom: 10px;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &_slider_control{
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
