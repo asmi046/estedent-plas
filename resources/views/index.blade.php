@@ -165,7 +165,7 @@
         </div>
     </section>
 
-    {{--
+
     <section class="clinic" id="clinic">
         <div class="container">
             <div class="clinic_top">
@@ -187,18 +187,32 @@
                 </div>
                 <div class="clinic_info">
                     <h2>Наша клиника</h2>
-                    <p>Адрес: г.Курск ул.Иванова 22</p>
-                    <hr>
-                    <p>Ежедневно с 09:00-21:00</p>
+
+                    <div class="info">
+                        <p>Адрес: г.Курск ул.Иванова 22</p>
+                        <hr>
+                        <p>Ежедневно с 09:00-21:00</p>
+                    </div>
+
                     <a href="#" class="button">Записаться на прием</a>
                 </div>
             </div>
             <div class="clinic_bottom">
-                <img src="{{ asset('tmp_data/photo/p1.webp') }}" alt="Изображение 1">
-                <img src="{{ asset('tmp_data/photo/p2.webp') }}" alt="Изображение 2">
-                <img src="{{ asset('tmp_data/photo/p3.webp') }}" alt="Изображение 3">
-                <img src="{{ asset('tmp_data/photo/p4.webp') }}" alt="Изображение 4">
-                <img src="{{ asset('tmp_data/photo/p5.webp') }}" alt="Изображение 5">
+                <div class="clinic_photo_item">
+                    <img src="{{ asset('tmp_data/photo/p1.webp') }}" alt="Изображение 1">
+                </div>
+                <div class="clinic_photo_item">
+                    <img src="{{ asset('tmp_data/photo/p2.webp') }}" alt="Изображение 2">
+                </div>
+                <div class="clinic_photo_item">
+                    <img src="{{ asset('tmp_data/photo/p3.webp') }}" alt="Изображение 3">
+                </div>
+                <div class="clinic_photo_item">
+                    <img src="{{ asset('tmp_data/photo/p4.webp') }}" alt="Изображение 4">
+                </div>
+                <div class="clinic_photo_item">
+                    <img src="{{ asset('tmp_data/photo/p5.webp') }}" alt="Изображение 5">
+                </div>
             </div>
         </div>
     </section>
@@ -336,7 +350,7 @@
                 </div>
             </div>
         </div>
-    </footer> --}}
+    </footer>
 
 @endsection
 

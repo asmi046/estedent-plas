@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 const sertSwiper = document.querySelector('.main-sert-swiper');
 
 const sertSwiperParams = {
@@ -27,3 +28,4 @@ const sertSwiperParams = {
 Object.assign(sertSwiper, sertSwiperParams);
 
 sertSwiper.initialize();
+});

@@ -7,10 +7,19 @@
         margin-bottom: 30px;
     }
 
+    swiper-slide {
+        height: 100%;
+        display: flex;
+    }
+
     &_card {
         border: 1px solid $main_color;
         border-top-left-radius: 50px;
         overflow: hidden;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
 
         &_img {
             height: 410px;
@@ -24,7 +33,9 @@
 
         &_text {
             padding: 30px;
-
+            flex: 1;
+            display: flex;
+            flex-direction: column;
             h3 {
                 font-size: 22px;
                 font-weight: 700;
@@ -34,6 +45,10 @@
 
             p {
                 margin-bottom: 20px;
+            }
+
+            .button {
+                margin: auto auto 0 0;
             }
         }
     }
