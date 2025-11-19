@@ -102,6 +102,22 @@
         &_top{
             grid-template-columns: 1fr;
         }
+
+        &_slider_wrap{
+            border-top-right-radius: $border_rad_big;
+        }
+
+        &_info{
+            .button{
+                margin: auto auto auto 0;
+            }
+        }
+        &_bottom{
+            grid-template-columns: repeat(2, 1fr);
+            .clinic_photo_item:last-child{
+                display: none;
+            }
+        }
     }
 }
 

@@ -12,6 +12,7 @@
         flex-wrap: wrap;
         align-items: center;
         gap: 30px;
+        border-radius: $border_rad_big $border_rad_big 0 0;
     }
 
     &__left {
@@ -55,35 +56,25 @@
 
 // Adaptation
 @media (max-width: 1200px) {
-    .banner_section {
-        .container {
-            background-size: 50%;
-        }
-        &__left {
-            width: 45%;
-        }
-    }
-}
 
-
-@media (max-width: 992px) {
     .banner_section {
         min-height: auto;
         padding: 40px 0;
         .container {
-            background-image: none;
+            background-size: cover;
             flex-direction: column;
         }
         &__left {
-            width: 100%;
-            text-align: center;
-            align-items: center;
+            width: unset;
+            padding: 30px;
         }
         &__right {
-            width: 100%;
-            border-radius: 20px;
-            border: 10px solid $sub_color;
-            border-top-left-radius: 20px;
+            width: calc(100% - 40px);
+            border-right: 20px solid $sub_color;
+            // border: 10px solid $sub_color;
+            border-top-right-radius: 100px;
+            // border: none;
+            align-items: center;
         }
     }
 }

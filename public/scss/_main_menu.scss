@@ -31,3 +31,9 @@
         }
     }
 }
+
+@media (max-width: 520px) {
+    .main_menu {
+        display: none;
+    }
+}
