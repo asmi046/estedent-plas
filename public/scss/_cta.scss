@@ -67,3 +67,15 @@
         }
     }
 }
+
+@media (max-width: 520px) {
+    .cta {
+        &_wrap {
+            gap: 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+}

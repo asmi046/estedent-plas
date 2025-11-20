@@ -59,7 +59,7 @@
 
     .banner_section {
         min-height: auto;
-        padding: 40px 0;
+        padding: 20px 0;
         .container {
             background-size: cover;
             flex-direction: column;
@@ -81,7 +81,50 @@
 
 @media (max-width: 768px) {
     .banner_section {
+        .container {
+            background-image: none;
+            gap:20px
+        }
+
+        &__buttons {
+            flex-direction: column;
+            margin-top: 5px;
+            .button {
+                text-align: center;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+        }
+
+        &__right {
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
+            border-top: 10px solid $sub_color;
+            border-left: 10px solid $sub_color;
+            border-right: 10px solid $sub_color;
+        }
+
+        .swiper_control_wrap  {
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
         &__left {
+            padding: 0 10px;
+            gap: 10px;
+
+
+            ul {
+                li {
+                    margin: 5px 0;
+                }
+            }
+
+            p {
+                margin: 0;
+            }
+
             h1 {
                 font-size: 28px;
             }

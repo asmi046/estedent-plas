@@ -12,6 +12,14 @@
         flex-wrap: wrap;
     }
 
+    &__mobile_phone {
+        display: none;
+        .icon-phone_icon {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
     &__logo {
         flex-shrink: 0;
         img {
@@ -74,6 +82,7 @@
 
 @media (max-width: 520px) {
     .header {
+        padding: 10px 0;
         &__logo {
             img {
                 height: 40px;
@@ -81,6 +90,9 @@
         }
         &__phone {
             display: none;
+        }
+        &__mobile_phone {
+            display: block;
         }
         &__button {
             display: none;

@@ -115,3 +115,9 @@ img {
         margin-right: auto;
     }
 }
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}

@@ -125,9 +125,14 @@
     .clinic{
         &_bottom{
             grid-template-columns: repeat(2, 1fr);
-            img:last-child{
-                display: none;
+            gap:20px;
+
+            &_item{
+                img:last-child{
+                    display: none;
+                }
             }
+
         }
     }
 }

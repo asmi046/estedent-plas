@@ -58,3 +58,27 @@
         justify-content: flex-end;
     }
 }
+
+@media (max-width: 520px) {
+    .personal {
+        &_card {
+            &_text {
+                padding: 20px;
+                h3 {
+                    margin-top: 0;
+                    font-size: 18px;
+                }
+            }
+
+            &_img {
+                height: 300px;
+            }
+        }
+
+        &_slider_control{
+            margin-top: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

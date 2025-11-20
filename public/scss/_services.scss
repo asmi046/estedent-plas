@@ -56,11 +56,12 @@
     .services {
         &_wrap {
             grid-template-columns: 1fr;
+            gap:10px;
         }
         &_card{
             h3{
                 min-width: auto;
-                width: calc(100% - 40px);
+                width: 50%;
             }
         }
     }

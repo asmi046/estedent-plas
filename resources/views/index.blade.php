@@ -16,6 +16,15 @@
                     <img src="{{ asset('img/logo.svg') }}" alt="logo" >
                 </a>
             </div>
+
+            <div class="header__mobile_phone">
+                <a href="tel:+74712770303">
+                    <svg class="icon icon-phone_icon">
+                        <use xlink:href="#phone_icon"></use>
+                    </svg>
+                </a>
+            </div>
+
             <div class="header__address">
                 Адрес: г.Курск <br>Павлуновского, 114 <br>Ежедневно с 09:00-21:00
             </div>
