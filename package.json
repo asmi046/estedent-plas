@@ -17,6 +17,10 @@
     },
     "dependencies": {
         "@vitejs/plugin-vue": "^6.0.1",
-        "swiper": "^12.0.3"
+        "i": "^0.3.7",
+        "npm": "^11.6.3",
+        "swiper": "^12.0.3",
+        "v-slim-mask": "^1.0.24",
+        "vue-axios": "^3.5.2"
     }
 }

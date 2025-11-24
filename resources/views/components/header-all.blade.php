@@ -21,7 +21,7 @@
                 <a href="tel:+7{{ phone_format($contacts['phone']->value) }}">{{ $contacts['phone']->value }}</a>
             </div>
             <div class="header__button">
-                <a href="#" class="button">Записаться</a>
+                <a href="#consultation" class="button">Записаться</a>
             </div>
         </div>
     </header>

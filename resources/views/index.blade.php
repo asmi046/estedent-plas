@@ -273,51 +273,6 @@
         </div>
     </section>
 
-    <footer class="footer" id="footer">
-        <div class="container">
-            <div class="footer_top">
-                <div class="footer_col footer_col_1">
-                    <a href="/">
-                        <img src="{{ asset('img/logo.svg') }}" alt="logo">
-                    </a>
-                </div>
-                <div class="footer_col footer_col_2">
-                    <p>Адрес: г.Курск <br>Павлуновского, 114 <br>Ежедневно с 09:00-21:00</p>
-                    <a class="phone" href="tel:+74712770303">+7 (4712) 77-03-03</a>
-                    <a href="#" class="button">Записаться на прием</a>
-                </div>
-                <div class="footer_col footer_col_3">
-                    <ul>
-                        <li><a href="#">Имплантация</a></li>
-                        <li><a href="#">Протезирование</a></li>
-                        <li><a href="#">Коронки</a></li>
-                        <li><a href="#">Лечение</a></li>
-                        <li><a href="#">Отбеливание</a></li>
-                        <li><a href="#">Хирургия</a></li>
-                    </ul>
-                </div>
-                <div class="footer_col footer_col_4">
-                    <ul>
-                        <li><a href="#">Акции</a></li>
-                        <li><a href="#">Цены</a></li>
-                        <li><a href="#">Специалисты</a></li>
-                        <li><a href="#">Отзывы</a></li>
-                        <li><a href="#">Работа у нас</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer_bottom">
-                <div class="footer_copy">
-                    © ООО “Эстедент Плюс”
-                </div>
-                <div class="footer_links">
-                    <a href="#">Политика конфиденциальности</a>
-                    <a href="#">Согласие на обработку персональных данных</a>
-                </div>
-            </div>
-        </div>
-    </footer>
 
 @endsection
 

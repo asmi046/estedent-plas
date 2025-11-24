@@ -33,6 +33,13 @@
     <main id="main">
         <x-header-all></x-header-all>
         @yield('main')
+        <x-footer-all></x-footer-all>
     </main>
+
+    <div class="modal_win" id="global_app">
+        <modal-window rout="/send_consult" redirect="/thencs" hesh="consultation" title="Помощь специалиста" subtitle="Мы свяжемся с Вами в течении 15 минут"></modal-window>
+
+
+    </div>
 </body>
 </html>

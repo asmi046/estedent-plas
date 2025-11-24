@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactsController;
+use App\Http\Controllers\Page\PageController;
     use Illuminate\Support\Facades\Route;
 
     use App\Http\Controllers\IndexController;
@@ -8,6 +9,7 @@ use App\Http\Controllers\ContactsController;
     use App\Http\Controllers\PriceController;
 
     Route::get('/', [IndexController::class, "index"])->name('home');
+    Route::get('/page/{slug}', [PageController::class, "index"])->name('page');
 
     // Специалисты
     Route::get('/specialists', [SpecialistController::class, 'index'])->name('specialists.index');
