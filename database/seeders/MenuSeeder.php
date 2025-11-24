@@ -49,7 +49,7 @@ class MenuSeeder extends Seeder
                 'menu_name' => 'Главное меню',
                 'title' => 'Контакты',
                 'order' => 6,
-                'lnk' => "#",
+                'lnk' => "/contacts",
             ]
         ];
 

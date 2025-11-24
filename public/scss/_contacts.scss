@@ -1,0 +1,29 @@
+@use 'vars' as *;
+
+.contacts_page_section {
+    h2 {
+        font-size: 22px;
+        margin: 10px 0;
+    }
+
+    .colls {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    a {
+        color:$main_color;
+    }
+
+    .label {
+        color: $gray_border_color;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts_page_section {
+        .colls {
+            flex-direction: column;
+        }
+    }
+}

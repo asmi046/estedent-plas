@@ -9,6 +9,7 @@
 @use "form/all-form";
 @use "elements/all-elements";
 
+@use "cols";
 @use "current";
 
 @use "modal";
@@ -28,6 +29,7 @@
 
 @use "cookie";
 
+@use "contacts";
 @use "advantages";
 @use "cta";
 @use "services";

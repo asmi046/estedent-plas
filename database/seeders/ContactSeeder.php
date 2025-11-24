@@ -23,6 +23,12 @@ class ContactSeeder extends Seeder
                 ],
 
                 [
+                    'name' => 'company_name',
+                    'title' => 'Имя компании',
+                    'value' => 'Общество с ограниченной ответственностью ООО «Эстедент плюс»',
+                ],
+
+                [
                     'name' => 'phone',
                     'title' => 'Телефон',
                     'value' => '+7 (4712) 78-77-00',
@@ -60,7 +66,13 @@ class ContactSeeder extends Seeder
                 [
                     'name' => 'adress',
                     'title' => 'Адрес компании',
-                    'value' => 'г. Курск, ул. Павлуновского, 114',
+                    'value' => 'г. Курск, ул. Павлуновского, д. 114',
+                ],
+
+                [
+                    'name' => 'adress_2',
+                    'title' => 'Адрес компании 2',
+                    'value' => 'г. Курск, ул. 1-я Пушкарная, д. 21',
                 ],
 
                 [
@@ -74,8 +86,6 @@ class ContactSeeder extends Seeder
                     'title' => 'E-mail',
                     'value' => 'estedent100@yandex.ru',
                 ],
-
-
 
                 [
                     'name' => 'inn',
@@ -108,11 +118,16 @@ class ContactSeeder extends Seeder
                     'value' => 'Министерство здравоохранения Курской области',
                 ],
 
-
                 [
                     'name' => 'geo',
                     'title' => 'Кординаты',
-                    'value' => '61.26667125324669,73.42057220370485',
+                    'value' => '51.73998603049373,36.15443965707777',
+                ],
+
+                [
+                    'name' => 'geo_2',
+                    'title' => 'Кординаты 2',
+                    'value' => '51.75265409548752,36.18484634788514',
                 ],
 
             ]

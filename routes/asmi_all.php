@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\ContactsController;
     use Illuminate\Support\Facades\Route;
 
     use App\Http\Controllers\IndexController;
@@ -13,4 +15,6 @@
 
     // Цены
     Route::get('/prices', [PriceController::class, 'index'])->name('prices.index');
+
+    Route::get('/contacts', [ContactsController::class, "index"])->name('contacts');
 
