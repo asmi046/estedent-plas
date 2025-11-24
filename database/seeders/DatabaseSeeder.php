@@ -18,6 +18,10 @@ class DatabaseSeeder extends Seeder
         $this->call([
             PageSeeder::class,
             SeoDataSeeder::class,
+            SpecialistSeeder::class,
+            AdvantageSeeder::class,
+            BannerSeeder::class,
+            PriceSeeder::class,
         ]);
 
         // User::factory(10)->create();
