@@ -10,94 +10,11 @@
 
 @section('main')
 
-    <section class="banner_section">
-        <div class="container" >
-            <div class="banner_section__left text_styles">
-                <h1>Стоматологическая клиника Эстедент плюс</h1>
-                <p>Мы дарить вам здоровую и красивую улыбку, которая станет вашим пропуском в мир успеха и уверенности</p>
-                <ul>
-                    <li>Передовые технологии и мастерство, отточенное временем</li>
-                    <li>Многолетняя репутация семейной стоматологии</li>
-                    <li>Опытные врачи со стажем 6-19 лет</li>
-                </ul>
-                <div class="banner_section__buttons">
-                    <a href="#" class="button">Наши услуги</a>
-                    <a href="#" class="button">Наши врачи</a>
-                </div>
-            </div>
-            <div class="banner_section__right">
-                <swiper-container class="main-banner-swiper" init="false">
-                    <swiper-slide>
-                        <img src="{{ asset('tmp_data/slide_1.webp') }}" alt="Slide 1">
-                    </swiper-slide>
-                    <swiper-slide>
-                        <img src="{{ asset('tmp_data/slide_2.webp') }}" alt="Slide 2">
-                    </swiper-slide>
-                </swiper-container>
-            </div>
+    <x-main.banner></x-main.banner>
 
+    <x-main.advantages></x-main.advantages>
 
-        </div>
-
-        <div class="container bg_none">
-            <div class="swiper_control_wrap">
-                <div class="swiper-control swiper-button-prev"></div>
-                <div class="swiper-control swiper-button-next"></div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="advantages" id="advantages">
-        <div class="container">
-            <div class="advantages_wrap">
-                <div class="advantages_item">
-                    <div class="advantages_item_icon">
-                        <img src="{{ asset('img/icon/adv/adv_1.svg') }}" alt="Современное оборудование">
-                    </div>
-                    <div class="advantages_item_text_block">
-                        <h2>Современное оборудование</h2>
-                        <p>Используем передовые технологии и цифровую диагностику для точного и безболезненного лечения</p>
-                    </div>
-                </div>
-                <div class="advantages_item">
-                    <div class="advantages_item_icon">
-                        <img src="{{ asset('img/icon/adv/adv_2.svg') }}" alt="Опытные специалисты">
-                    </div>
-                    <div class="advantages_item_text_block">
-                        <h2>Опытные специалисты</h2>
-                        <p>Команда врачей с многолетней практикой и узкой специализацией в различных областях стоматологии</p>
-                    </div>
-                </div>
-                <div class="advantages_item">
-                    <div class="advantages_item_icon">
-                        <img src="{{ asset('img/icon/adv/adv_3.svg') }}" alt="Удобное расположение">
-                    </div>
-                    <div class="advantages_item_text_block">
-                        <h2>Удобное расположение</h2>
-                        <p>Клиника рядом с вами, работаем по гибкому расписанию, включая вечерние часы и выходные.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="cta" id="cta">
-        <div class="container">
-            <div class="cta_wrap">
-                <h2>Подробная консультация и подбор плана лечения</h2>
-                <div class="cta_decor_block"></div>
-                <div class="cta_contact_block">
-                    <p>Работаем для вас с 09:00-21:00</p>
-                    <a class="phone" href="tel:+74712770303">+7 (4712) 77-03-03</a>
-                </div>
-                <div class="cta_button_block">
-                    <a href="#" class="button">Обратный звонок</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <x-main.cta></x-main.cta>
 
 
     <section class="services" id="services">
@@ -133,56 +50,7 @@
     </section>
 
 
-    <section class="clinic" id="clinic">
-        <div class="container">
-            <div class="clinic_top">
-                <div class="clinic_slider_wrap">
-                    <swiper-container class="main-clinic-swiper" init="false">
-                        <swiper-slide>
-                            <img src="{{ asset('tmp_data/photo/p1.webp') }}" alt="photo 1">
-                        </swiper-slide>
-                        <swiper-slide>
-                            <img src="{{ asset('tmp_data/photo/p2.webp') }}" alt="photo 2">
-                        </swiper-slide>
-                    </swiper-container>
-                    <div class="clinic_slider_control">
-                        <div class="swiper_control_wrap">
-                            <div id="clinic_slider_prev" class="swiper-control swiper-button-prev"></div>
-                            <div id="clinic_slider_next" class="swiper-control swiper-button-next"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="clinic_info">
-                    <h2>Наша клиника</h2>
-
-                    <div class="info">
-                        <p>Адрес: г.Курск ул.Иванова 22</p>
-                        <hr>
-                        <p>Ежедневно с 09:00-21:00</p>
-                    </div>
-
-                    <a href="#" class="button">Записаться на прием</a>
-                </div>
-            </div>
-            <div class="clinic_bottom">
-                <div class="clinic_photo_item">
-                    <img src="{{ asset('tmp_data/photo/p1.webp') }}" alt="Изображение 1">
-                </div>
-                <div class="clinic_photo_item">
-                    <img src="{{ asset('tmp_data/photo/p2.webp') }}" alt="Изображение 2">
-                </div>
-                <div class="clinic_photo_item">
-                    <img src="{{ asset('tmp_data/photo/p3.webp') }}" alt="Изображение 3">
-                </div>
-                <div class="clinic_photo_item">
-                    <img src="{{ asset('tmp_data/photo/p4.webp') }}" alt="Изображение 4">
-                </div>
-                <div class="clinic_photo_item">
-                    <img src="{{ asset('tmp_data/photo/p5.webp') }}" alt="Изображение 5">
-                </div>
-            </div>
-        </div>
-    </section>
+    <x-main.clinic></x-main.clinic>
 
     <section class="personal" id="personal">
         <div class="container">

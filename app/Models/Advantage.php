@@ -12,7 +12,7 @@ class Advantage extends Model
     protected $fillable = [
         'title',
         'description',
-        'image',
+        'icon',
         'sort_order'
     ];
 }

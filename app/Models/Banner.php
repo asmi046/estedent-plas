@@ -13,6 +13,6 @@ class Banner extends Model
         'name',
         'title',
         'sort_order',
-        'image'
+        'img'
     ];
 }

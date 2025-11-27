@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('banners', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100);
-            $table->string('title')->nullable();
-            $table->integer('sort_order')->default(0);
-            $table->string('image', 500);
+            $table->string('name', 100)->comment('Название раздела');
+            $table->string('title')->nullable()->comment('Заголовок');
+            $table->integer('sort_order')->default(0)->comment('Порядок вывода');
+            $table->string('img', 500)->comment('Изображение');
             $table->timestamps();
         });
     }

@@ -1,16 +1,11 @@
 @extends('layouts.all')
 
 @section('main')
+<x-headers.page-header title="Контакты нашей клиники"></x-headers.page-header>
     <section class="page_section">
         <div class="container">
-            <x-breadcrumbs.main title="Контакты"></x-breadcrumbs.main>
-            <div class="section__header">
-                <h2 class="section__title __left">Контакты</h2>
-            </div>
-
             <div class="page_content contacts_page_section">
                 <div class="content">
-                    <h1 class="inner_page_h1">Контакты нашей клиники</h1>
 
                     <div class="colls">
                         <div class="col">
@@ -36,12 +31,18 @@
 
                         <div class="col">
                             <h2>Контакты</h2>
-                            <p class="param">тел. <a class="phone" href="tel:+7{{ phone_format( $contacts['phone'] ) }}">{{ $contacts['phone'] }}</a></p>
-                            <p class="param">тел. <a class="phone" href="tel:+7{{ phone_format( $contacts['phone_2'] ) }}">{{ $contacts['phone_2'] }}</a></p>
-                            <p class="param">e-mail: <a class="email" href="mailto:{{ $contacts['email']}}">{{ $contacts['email'] }}</a></p>
-                            <h2>Главный офис</h2>
+
+
+
                             <p class="param">Адрес: {{ $contacts['adress'] }}</p>
                             <p class="param">Режим работы: {{ $contacts['work_time'] }}</p>
+                            <p class="param">тел. <a class="phone" href="tel:+7{{ phone_format( $contacts['phone'] ) }}">{{ $contacts['phone'] }}</a></p>
+                            <br>
+                            <p class="param">Адрес: {{ $contacts['adress_2'] }}</p>
+                            <p class="param">Режим работы: {{ $contacts['work_time'] }}</p>
+                            <p class="param">тел. <a class="phone" href="tel:+7{{ phone_format( $contacts['phone_2'] ) }}">{{ $contacts['phone_2'] }}</a></p>
+                            <br>
+                            <p class="param">e-mail: <a class="email" href="mailto:{{ $contacts['email']}}">{{ $contacts['email'] }}</a></p>
                         </div>
                     </div>
 
@@ -60,6 +61,20 @@
 
                 </div>
             </div>
+            <br>
+            <details>
+                <summary>Контролирующие организации</summary>
+                <div class="response">
+                    @foreach ($organizations as $item)
+                        <div class="org_item">
+                            <h3>{{ $item['name'] }}</h3>
+                            <p>Адрес: {{ $item['address'] }}</p>
+                            <p>Телефон: {{ $item['phones'] }}</p>
+                            <p>e-mail: {{ $item['email'] }}</p>
+                        </div>
+                    @endforeach
+                </div>
+            </details>
         </div>
     </section>
 @endsection
