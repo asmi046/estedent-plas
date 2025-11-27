@@ -8,7 +8,7 @@ use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cache;
 
-class cta extends Component
+class Cta extends Component
 {
     public $cta;
     /**
