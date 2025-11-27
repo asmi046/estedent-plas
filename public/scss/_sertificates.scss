@@ -9,9 +9,26 @@
     p{
         margin-bottom: 30px;
     }
+
+    swiper-slide {
+        display: flex;
+        justify-content: center;
+        max-height: 310px;
+    }
+
     &_slider_control{
         margin-top: 30px;
         display: flex;
         justify-content: flex-end;
+    }
+}
+
+
+@media (max-width: 520px) {
+    .sertificates{
+        swiper-slide {
+            max-height: 180px;
+            height: 100%;
+        }
     }
 }

@@ -139,5 +139,15 @@
             }
 
         }
+
+        &_slider_wrap{
+            swiper-container,
+            .swiper,
+            .swiper-wrapper,
+            .swiper-slide{
+                max-height: 315px;
+                height: 100%;
+            }
+        }
     }
 }

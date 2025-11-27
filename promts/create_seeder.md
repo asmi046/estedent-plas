@@ -1,10 +1,11 @@
-В файле database\seeders\BannerSeeder.php реализуй механизм заполнения соответствующей таблицы. При реализации заполенниия опирайся на поля из миграции database\migrations\2025_11_20_130044_create_banners_table.php. 
+Проанализируй страницу расположенную по адресу https://www.estedent-plus.ru/page-5.html и на ее основе, в файле database\seeders\SpecialistSeeder.php реализуй механизм заполнения соответствующей таблицы. При реализации заполенниия опирайся на поля из миграции database\migrations\2025_11_20_130030_create_specialists_table.php.
 
-Изображения для баннеров:
-
-public\tmp_data\bn\main_1.webp
-public\tmp_data\bn\main_2.webp
-public\tmp_data\bn\main_3.webp
-public\tmp_data\bn\main_4.webp
+Так же руководствуйся следующими правилами:
+- Фото не заполняй просто оставь null
+- Поле position заполни должностью каждого из специалистов
+- У некоторых специалистов есть сертификаты сохрани их в папку public\tmp_data\doctors файлам дай имена состоящие из транслитирации ФИО доктора и номером сертификатв.
+- Данные о скаченных сертификатах размести в json поле certificates
 
 Работай на уровне фасада DB.
+
+

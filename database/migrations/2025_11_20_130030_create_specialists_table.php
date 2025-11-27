@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('specialists', function (Blueprint $table) {
             $table->id();
             $table->string('fio');
-            $table->string('photo', 550);
+            $table->string('photo', 550)->nullable();
             $table->string('slug')->unique();
             $table->string('position', 150);
             $table->text('description')->nullable();
