@@ -25,7 +25,7 @@ class SpecialistSeeder extends Seeder
         foreach ($certs as $cert) {
             Storage::disk('public')->put(
                 "specialists/{$cert}",
-                file_get_contents(public_path("tmp_data/doctors/{$cert}")),
+                file_get_contents(public_path("tmp_data/doctors/cert/{$cert}")),
                 'public'
             );
         }
