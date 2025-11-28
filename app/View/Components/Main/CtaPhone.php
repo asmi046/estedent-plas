@@ -8,7 +8,7 @@ use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cache;
 
-class CtaMain extends Component
+class CtaPhone extends Component
 {
     public $cta;
     /**
@@ -19,7 +19,6 @@ class CtaMain extends Component
         $this->cta = Cache::rememberForever('main_cta', function () {
             return Parametr::where('section', 'CTA блок на главной')->get()->keyBy('str_id');
         });
-        dd($this->cta);
     }
 
     /**
@@ -27,6 +26,6 @@ class CtaMain extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.main.cta');
+        return view('components.main.cta-phone');
     }
 }

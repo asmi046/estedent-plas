@@ -14,7 +14,7 @@
 
     <x-main.advantages></x-main.advantages>
 
-    <x-main.cta></x-main.cta>
+    <x-main.cta-phone></x-main.cta-phone>
 
 
     <section class="services" id="services">
