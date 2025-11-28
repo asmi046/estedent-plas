@@ -17,8 +17,16 @@ class SeoDataSeeder extends Seeder
         $data = [
             [
                 'url' => "/",
-                'seo_title' => "Стоматология в Курске",
-                'seo_description' => "Стоматологическая клиника Dentalica в городе Курск. Все виды стоматологических услуг",
+                'seo_title' => "Стоматологическая клиника в Курске",
+                'seo_description' => "Стоматологическая клиника Эстедент Плюс в городе Курск. Все виды стоматологических услуг",
+                'page_title' => "",
+                // 'seoable_id' => 1,
+                // 'seoable_type' => "App\Models\Page"
+            ],
+            [
+                'url' => "contacts",
+                'seo_title' => "Контакты стоматологической клиники - Эстедент Плюс",
+                'seo_description' => "Свяжитесь с нами любым удобным способом. Вы получите подрбную консультацию и сможете записаться на прием",
                 'page_title' => "",
                 // 'seoable_id' => 1,
                 // 'seoable_type' => "App\Models\Page"
