@@ -19,6 +19,7 @@ class Cta extends Component
         $this->cta = Cache::rememberForever('main_cta', function () {
             return Parametr::where('section', 'CTA блок на главной')->get()->keyBy('str_id');
         });
+        dd($this->cta);
     }
 
     /**
