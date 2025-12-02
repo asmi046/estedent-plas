@@ -9,7 +9,8 @@ class PriceController extends Controller
 {
     public function index()
     {
-        $prices = Price::orderBy('sort_order')->get();
+        $prices = Price::orderBy('sort_order')->get()->groupBy('unit');
+        // dd($prices);
         return view('prices.index', compact('prices'));
     }
 }
