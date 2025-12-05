@@ -43,7 +43,7 @@ class MenuSeeder extends Seeder
                 'menu_name' => 'Главное меню',
                 'title' => 'Клиника',
                 'order' => 5,
-                'lnk' => "#",
+                'lnk' => "/about",
             ],
             [
                 'menu_name' => 'Главное меню',
@@ -126,7 +126,7 @@ class MenuSeeder extends Seeder
                 'menu_name' => 'Главное меню в подвале',
                 'title' => 'Клиника',
                 'order' => 5,
-                'lnk' => "#",
+                'lnk' => "/about",
             ],
             [
                 'menu_name' => 'Главное меню в подвале',

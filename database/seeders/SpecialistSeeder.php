@@ -46,7 +46,9 @@ class SpecialistSeeder extends Seeder
             );
         }
 
-        DB::table('specialists')->insert([
+
+
+        $sp_data = [
             [
                 'fio' => 'Бокарев Федор Вячеславович',
                 'photo' => 'specialists/bokarev.webp',
@@ -220,6 +222,19 @@ class SpecialistSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-        ]);
+        ];
+        foreach ($sp_data as $data) {
+            $pageId = DB::table('specialists')->insertGetId($data);
+
+            DB::table("seo_data")->insert(
+                [
+                    'url' => 'specialists/'.$data['slug'],
+                    'seo_title' => $data['fio']. ", записаться на прием в Курске",
+                    'seo_description' => $data['fio']. ", записаться на прием в Курске в клинике  Эстедент Плюс",
+                    'seoable_id' => $pageId,
+                    'seoable_type' => "App\Models\Specialist"
+                ]
+            );
+        }
     }
 }

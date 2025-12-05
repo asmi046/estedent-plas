@@ -9,6 +9,7 @@ use App\Http\Controllers\Page\PageController;
     use App\Http\Controllers\PriceController;
 
     Route::get('/', [IndexController::class, "index"])->name('home');
+    Route::get('/about', [IndexController::class, "about"])->name('about');
     Route::get('/page/{slug}', [PageController::class, "index"])->name('page');
 
     // Специалисты

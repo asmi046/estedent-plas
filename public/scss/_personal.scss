@@ -59,6 +59,13 @@
     }
 }
 
+.specialists_section_in_page {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
+    gap: 20px;
+}
+
+
 @media (max-width: 520px) {
     .personal {
         &_card {
@@ -79,6 +86,22 @@
             margin-top: 0;
             display: flex;
             justify-content: flex-end;
+        }
+    }
+
+    .specialists_section_in_page {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+        .personal_card {
+            border-top-left-radius: $border_rad;
+
+            &_img {
+                height: 200px;
+            }
+
+            .button {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
         }
     }
 }

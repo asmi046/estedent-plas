@@ -56,23 +56,33 @@
         position: relative;
     }
 
-    .uni_breadcrumbs {
+
+}
+
+.uni_breadcrumbs {
         z-index: 10;
         position: relative;
         .breadcrumbs {
-            a, span {
+
+            a {
                 color: #4F3E3A;
-                // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+                &:hover {
+                    color: $main_color;
+                }
             }
         }
     }
-}
 
 @media (max-width: 768px) {
     .page-header {
         padding: 40px 0;
         border-radius: $border_rad;
 
+        .container {
+            .content {
+                width: 100%;
+            }
+        }
         h1 {
             font-size: 32px;
         }

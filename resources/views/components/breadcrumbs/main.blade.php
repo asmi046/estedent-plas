@@ -28,17 +28,33 @@
                         <meta itemprop="position" content="2">
                     </span>
                 </span>
-            @endif
-
-            @if (isset($title))
+            @elseif (Request::route()->named('specialists.show'))
                 <span class="sep"> / </span>
-                    <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a title="Специалисты" itemprop="item" href="{{route('specialists.index')}}">
+                        <span itemprop="name">Специалисты</span>
+                        <meta itemprop="position" content="1">
+                    </a>
+                </span>
+
+                <span class="sep"> / </span>
+
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
+                    <span title="{{ $title }}" itemprop="item">
+                        <span itemprop="name">{{ $title }}</span>
+                        <meta itemprop="position" content="2">
+                    </span>
+                </span>
+            @else
+                <span class="sep"> / </span>
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
                         <span title="{{ $title }}" itemprop="item">
                             <span itemprop="name">{{ $title }}</span>
                             <meta itemprop="position" content="1">
                         </span>
-                    </span>
+                </span>
             @endif
+
 
          </div>
     </div>

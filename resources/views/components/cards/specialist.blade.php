@@ -1,10 +1,10 @@
-<div class="personal_card">
+<a href="{{ route('specialists.show', $item->slug) }}" class="personal_card">
     <div class="personal_card_img">
         <img src="{{ Storage::url($item->photo) }}" alt="{{ $item->fio }}">
     </div>
     <div class="personal_card_text">
         <h3>{{ $item->fio }}</h3>
         <p>{{ $item->position }}</p>
-        <a href="#" class="button">Подробнее</a>
+        <button class="button">Подробнее</button>
     </div>
-</div>
+</a>
