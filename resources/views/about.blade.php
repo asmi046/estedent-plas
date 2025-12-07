@@ -1,22 +1,74 @@
 @extends('layouts.all')
 
 @php
-    $title = "";
-    $description = "";
+    $title = "О клинике";
+    $description = "Стоматологическая клиника Эстедент Плюс в Курске. Современные технологии, опытные врачи, комфортное лечение.";
 @endphp
 
 @section('title', $title)
 @section('description', $description)
 
 @section('main')
+    <x-headers.page-header title="О клинике"></x-headers.page-header>
 
-    <section class="about_section">
+    <section id="team-photo-section" class="team-photo-section">
         <div class="container">
-            <x-breadcrumbs.main title="О нашей клинике"></x-breadcrumbs.main>
-            <h1>О нашей клинике</h1>
+            <img src="{{ asset('img/command_all.webp') }}" alt="Команда клиники Эстедент Плюс">
         </div>
     </section>
 
+    <section id="about-text-section" class="about-text-section">
+        <div class="container text_styles">
+            <p>Мы рады приветствовать вас сайте стоматологической клиники "Эстедент плюс"!</p>
+            <p>Наша клиника – это команда профессионалов, объединенных общей целью: дарить вам здоровую и красивую улыбку, которая станет вашим пропуском в мир успеха и уверенности.</p>
+            <p>В "Эстедент плюс" мы сочетаем многолетний опыт, передовые технологии и индивидуальный подход к каждому пациенту. Мы понимаем, что визит к стоматологу может вызывать тревогу и волнение, поэтому создали атмосферу комфорта и доверия, где вы сможете расслабиться и получить качественную стоматологическую помощь.</p>
+            <p>"Эстедент плюс" – это не просто стоматологическая клиника, это место, где заботятся о вашем здоровье и красоте улыбки. Запишитесь на консультацию прямо сейчас и убедитесь в этом сами! Будьте здоровы и улыбайтесь чаще!</p>
+        </div>
+    </section>
 
+    <section id="facts-section" class="facts-section">
+        <div class="container">
+            <h2>Почему нам доверяют? Несколько важных фактов</h2>
+            <div class="facts-items">
+                <div class="fact-item">
+                    <div class="fact-item-img">
+                        <img src="{{ asset('img/about/f0.webp') }}" alt="Современная стоматология в самом сердце Курска">
+                        <div class="fact-item-number">01</div>
+                    </div>
+                    <h3>Современная стоматология в самом сердце Курска</h3>
+                    <p>Клиника «Эстедент Плюс» — это передовые технологии, цифровая диагностика и комфортное лечение в удобном месте. Забудьте о старых представлениях о стоматологии: у нас всё по-новому!</p>
+                </div>
+                <div class="fact-item">
+                    <div class="fact-item-img">
+                        <img src="{{ asset('img/about/f1.webp') }}" alt="98% наших пациентов возвращаются и рекомендуют нас друзьям">
+                        <div class="fact-item-number">02</div>
+                    </div>
+                    <h3>Нашу клинику рекомендуют друзьям и родственникам</h3>
+                    <p>Когда результат превосходит ожидания — о нём рассказывают. Доверяйте тому, кому доверяют куряне: «Эстедент Плюс» — это не просто лечение, это забота, которая запоминается.</p>
+                </div>
+                <div class="fact-item">
+                    <div class="fact-item-img">
+                        <img src="{{ asset('img/about/f3.webp') }}" alt="Команда из 17 сертифицированных специалистов с опытом от 5 до 19 лет">
+                        <div class="fact-item-number">03</div>
+                    </div>
+                    <h3>Команда профеи с опытом от 5 до 19 лет</h3>
+                    <p>В «Эстедент Плюс» работают только проверенные эксперты, которые регулярно повышают квалификацию и осваивают мировые протоколы лечения. Ваша улыбка — в надёжных руках!</p>
+                </div>
+                <div class="fact-item">
+                    <div class="fact-item-img">
+                        <img src="{{ asset('img/about/f2.webp') }}" alt="Официальный центр Nobel Biocare и партнёр Swiss Denture">
+                        <div class="fact-item-number">04</div>
+                    </div>
+                    <h3>Качественное осначение оборудованием и материалами</h3>
+                    <p>Наша клиника оснащена современным оборудованием и использует только сертифицированные материалы, что гарантирует высокое качество лечения и безопасность для наших пациентов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <x-main.cta-phone></x-main.cta-phone>
+    <x-main.clinic></x-main.clinic>
+    <x-main.specialists></x-main.specialists>
+    <x-main.cert></x-main.cert>
 @endsection
 

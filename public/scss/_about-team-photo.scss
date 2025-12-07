@@ -1,0 +1,8 @@
+@use 'vars' as *;
+
+.team-photo-section {
+    img {
+        width: 100%;
+        border-radius: $border_rad_big;
+    }
+}
