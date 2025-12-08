@@ -5,6 +5,8 @@
                 <a href="/">
                     <img src="{{ asset('img/logo.svg') }}" alt="logo">
                 </a>
+
+                <x-bvi-btn></x-bvi-btn>
             </div>
             <div class="footer_col footer_col_2">
                 <p>Адрес: <br>{{ $contacts['adress']->value }}<br>Время работы: <br>{{ $contacts['work_time']->value }}</p>

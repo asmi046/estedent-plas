@@ -4,6 +4,7 @@ import {createApp} from 'vue/dist/vue.esm-bundler'
 import ModalWindow from "./components/ModalWindow.vue"
 import EmptyModal from "./components/EmptyModal.vue"
 import { VMaskDirective } from 'v-slim-mask'
+import fslightbox from 'fslightbox'
 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -29,5 +30,7 @@ import './sliders/main-clinic-swiper.js';
 import './sliders/main-personal-swiper.js';
 import './sliders/main-sert-swiper.js';
 
-
+document.addEventListener("DOMContentLoaded", (event) => {
+    new isvek.Bvi();
+});
 

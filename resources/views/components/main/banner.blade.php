@@ -5,8 +5,8 @@
                 <p>{{ $options['main_1']->value }}</p>
                 {!! $options['main_2']->value !!}
                 <div class="banner_section__buttons">
-                    <a href="#" class="button">Наши услуги</a>
-                    <a href="#" class="button">Наши врачи</a>
+                    <a href="{{ route('services.index') }}" class="button">Наши услуги</a>
+                    <a href="{{ route('specialists.index') }}" class="button">Наши врачи</a>
                 </div>
             </div>
             <div class="banner_section__right">

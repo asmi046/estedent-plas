@@ -5,7 +5,10 @@
             <swiper-container class="main-sert-swiper" init="false">
                 @foreach ($certificates as $certificate)
                     <swiper-slide>
-                        <img src="{{ Storage::url($certificate) }}" alt="sert 1">
+                        <a data-fslightbox="sert_main-gallery" href="{{ Storage::url($certificate) }}">
+                            <img src="{{ Storage::url($certificate) }}" alt="sert 1">
+                        </a>
+
                     </swiper-slide>
                 @endforeach
 

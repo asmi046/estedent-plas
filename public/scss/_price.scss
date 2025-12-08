@@ -19,8 +19,14 @@
 
                 .service {
                     margin-left: 10px;
-                    span {
+                    display: flex;
+                    flex-wrap: wrap;
+                    span.name {
+                        flex: 1;
+                    }
+                    span.code {
                         color: $main_color;
+                        width:150px;
                     }
                 }
 
@@ -33,6 +39,7 @@
                 .price {
                     min-width: 100px;
                 }
+
             }
         }
 
@@ -55,6 +62,9 @@
 
         .price {
             text-align: right;
+        }
+        .service {
+            flex-direction: column;
         }
     }
 }

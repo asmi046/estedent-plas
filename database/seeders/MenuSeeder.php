@@ -19,7 +19,7 @@ class MenuSeeder extends Seeder
                 'menu_name' => 'Главное меню',
                 'title' => 'Услуги',
                 'order' => 1,
-                'lnk' => "",
+                'lnk' => "/services",
             ],
             [
                 'menu_name' => 'Главное меню',
@@ -37,7 +37,7 @@ class MenuSeeder extends Seeder
                 'menu_name' => 'Главное меню',
                 'title' => 'Акции',
                 'order' => 4,
-                'lnk' => "#",
+                'lnk' => "/sales",
             ],
             [
                 'menu_name' => 'Главное меню',
@@ -102,7 +102,7 @@ class MenuSeeder extends Seeder
                 'menu_name' => 'Главное меню в подвале',
                 'title' => 'Услуги',
                 'order' => 1,
-                'lnk' => "",
+                'lnk' => "/services",
             ],
             [
                 'menu_name' => 'Главное меню в подвале',
@@ -120,7 +120,7 @@ class MenuSeeder extends Seeder
                 'menu_name' => 'Главное меню в подвале',
                 'title' => 'Акции',
                 'order' => 4,
-                'lnk' => "#",
+                'lnk' => "/sales",
             ],
             [
                 'menu_name' => 'Главное меню в подвале',

@@ -5,7 +5,9 @@
                     <swiper-container class="main-clinic-swiper" init="false">
                         @foreach ($galery as $item)
                             <swiper-slide class="swiper-slide">
-                                <img src="{{ Storage::url($item->img) }}" alt="{{ $item->title }}">
+                                <a data-fslightbox="clinic_main-gallery" href="{{ Storage::url($item->img) }}">
+                                    <img src="{{ Storage::url($item->img) }}" alt="{{ $item->title }}">
+                                </a>
                             </swiper-slide>
                         @endforeach
 

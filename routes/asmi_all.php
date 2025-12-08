@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\Page\PageController;
     use Illuminate\Support\Facades\Route;
@@ -20,4 +21,5 @@ use App\Http\Controllers\Page\PageController;
     Route::get('/prices', [PriceController::class, 'index'])->name('prices.index');
 
     Route::get('/contacts', [ContactsController::class, "index"])->name('contacts');
-
+    Route::get('/sales', [IndexController::class, "sales"])->name('sales');
+    Route::get('/services', [ServiceController::class, "index"])->name('services.index');
