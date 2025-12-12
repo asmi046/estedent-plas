@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             PageSeeder::class,
             SeoDataSeeder::class,
             SpecialistSeeder::class,
+            ServiceSeeder::class,
             AdvantageSeeder::class,
             BannerSeeder::class,
             PriceSeeder::class,

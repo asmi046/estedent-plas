@@ -45,6 +45,23 @@
                         <meta itemprop="position" content="2">
                     </span>
                 </span>
+            @elseif (Request::route()->named('services.page'))
+                <span class="sep"> / </span>
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a title="Услуги" itemprop="item" href="{{route('services.index')}}">
+                        <span itemprop="name">Услуги</span>
+                        <meta itemprop="position" content="1">
+                    </a>
+                </span>
+
+                <span class="sep"> / </span>
+
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">
+                    <span title="{{ $title }}" itemprop="item">
+                        <span itemprop="name">{{ $title }}</span>
+                        <meta itemprop="position" content="2">
+                    </span>
+                </span>
             @else
                 <span class="sep"> / </span>
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="finish">

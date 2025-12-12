@@ -23,3 +23,4 @@ use App\Http\Controllers\Page\PageController;
     Route::get('/contacts', [ContactsController::class, "index"])->name('contacts');
     Route::get('/sales', [IndexController::class, "sales"])->name('sales');
     Route::get('/services', [ServiceController::class, "index"])->name('services.index');
+    Route::get('/services/{slug}', [ServiceController::class, "page"])->name('services.page');
