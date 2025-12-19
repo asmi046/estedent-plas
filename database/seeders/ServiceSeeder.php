@@ -8,6 +8,8 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use DB;
+
 class ServiceSeeder extends Seeder
 {
     /**
@@ -28,6 +30,11 @@ class ServiceSeeder extends Seeder
         Storage::disk('public')->put("services/system_3.webp", file_get_contents(public_path('tmp_data/services/system_3.webp')), 'public');
 
         include_once "services/implantation.php";
+        include_once "services/prosthetics.php";
+        include_once "services/crowns.php";
+        include_once "services/treatment.php";
+        include_once "services/whitening.php";
+        include_once "services/surgery.php";
 
          $services = [
             [
@@ -39,7 +46,7 @@ class ServiceSeeder extends Seeder
                 'price' => 'от 30 000 ₽',
                 'time' => '3-6 месяцев',
                 'order' => 1,
-                'sections' => $implantation,
+                'sections' => json_encode($implantation),
                 'description' => file_get_contents(public_path('tmp_data/services/implantation.html')),
             ],
             [
@@ -51,6 +58,7 @@ class ServiceSeeder extends Seeder
                 'price' => 'от 10 000 ₽',
                 'time' => '1-2 недели',
                 'order' => 2,
+                'sections' => json_encode($prosthetics),
                 'description' => file_get_contents(public_path('tmp_data/services/prosthetics.html')),
             ],
             [
@@ -62,6 +70,7 @@ class ServiceSeeder extends Seeder
                 'price' => 'от 5 000 ₽',
                 'time' => '1-2 недели',
                 'order' => 3,
+                'sections' => json_encode($crowns),
                 'description' => file_get_contents(public_path('tmp_data/services/crowns.html')),
             ],
             [
@@ -73,6 +82,7 @@ class ServiceSeeder extends Seeder
                 'price' => 'от 3 000 ₽',
                 'time' => '1-3 сеанса',
                 'order' => 4,
+                'sections' => json_encode($treatment),
                 'description' => file_get_contents(public_path('tmp_data/services/treatment.html')),
             ],
             [
@@ -84,6 +94,7 @@ class ServiceSeeder extends Seeder
                 'price' => 'от 5 000 ₽',
                 'time' => '1-2 часа',
                 'order' => 5,
+                'sections' => json_encode($whitening),
                 'description' => file_get_contents(public_path('tmp_data/services/whitening.html')),
             ],
             [
@@ -95,12 +106,23 @@ class ServiceSeeder extends Seeder
                 'price' => 'от 8 000 ₽',
                 'time' => '1-2 часа',
                 'order' => 6,
+                'sections' => json_encode($surgery),
                 'description' => file_get_contents(public_path('tmp_data/services/surgery.html')),
             ]
         ];
 
         foreach ($services as $service) {
-            Service::create($service);
+            $pageId = DB::table('services')->insertGetId($service);
+
+            DB::table("seo_data")->insert(
+                [
+                    'url' => 'services/'.$service['slug'],
+                    'seo_title' => $service['title'],
+                    'seo_description' => $service['title'],
+                    'seoable_id' => $pageId,
+                    'seoable_type' => "App\Models\Service"
+                ]
+            );
         }
     }
 }
