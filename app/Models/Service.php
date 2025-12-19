@@ -23,7 +23,7 @@ class Service extends Model
 
     ];
 
-    public $casts = [
-        'description' => 'array',
+    protected $casts = [
+        'sections' => 'array',
     ];
 }

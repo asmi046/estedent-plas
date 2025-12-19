@@ -1,0 +1,41 @@
+@use '../vars' as *;
+
+.services-number-card {
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .number-card {
+    display: grid;
+    background-color: rgba($main_color, 0.6);
+    border-radius: $border_rad_big 0 $border_rad_big 0;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    padding: 10px;
+
+    &__index {
+      font-weight: 700;
+      font-size: 32px;
+      color: white;
+      text-align: center;
+    }
+
+    &__title h3 {
+      font-weight: 700;
+      font-size: 18px;
+      color: $black_color;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 820px) {
+    .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 520px) {
+    .cards-grid { grid-template-columns: 1fr; }
+    .number-card { grid-template-columns: 48px 1fr; }
+  }
+}

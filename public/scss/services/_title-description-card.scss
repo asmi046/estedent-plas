@@ -1,0 +1,31 @@
+@use '../vars' as *;
+
+.services-title-description-card {
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .td-card {
+    border: 1px solid $main_color;
+    padding: 20px 30px;
+    border-radius: $border_rad_big;
+
+    h3 {
+      font-weight: 700;
+      font-size: 18px;
+      color: $black_color;
+      margin: 0 0 30px 0;
+    }
+
+  }
+
+  @media (max-width: 820px) {
+    .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 520px) {
+    .cards-grid { grid-template-columns: 1fr; }
+  }
+}

@@ -16,6 +16,8 @@ class ServiceController extends Controller
     public function page($slug)
     {
         $service = Service::where('slug', $slug)->firstOrFail();
-        return view('services.page', ['service' => $service]);
+        $template = ($service->template)?$service->template:'services.page';
+        // dd($service->sections);
+        return view($template, ['service' => $service]);
     }
 }

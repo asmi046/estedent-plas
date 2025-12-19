@@ -33,7 +33,11 @@
 @use "contacts";
 @use "advantages";
 @use "cta";
-@use "services";
+@use "services/services";
+@use "services/number-card";
+@use "services/image-description-card";
+@use "services/title-description-card";
+@use "services/steps";
 @use "clinic";
 @use "personal";
 @use "sertificates";
