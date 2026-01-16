@@ -26,7 +26,11 @@ class DatabaseSeeder extends Seeder
             ServiceSeeder::class,
             AdvantageSeeder::class,
             BannerSeeder::class,
-            PriceSeeder::class,
+            PriceSeederTerapy::class,
+            PriceSeederHir::class,
+            PriceSeederOrto::class,
+            PriceSeederRengen::class,
+
         ]);
 
         // User::factory(10)->create();
