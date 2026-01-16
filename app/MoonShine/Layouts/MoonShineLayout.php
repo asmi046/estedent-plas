@@ -4,32 +4,15 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Layouts;
 
-use MoonShine\Laravel\Layouts\AppLayout;
+use App\MoonShine\Resources\ContactResource;
+use App\MoonShine\Resources\MenuResource;
+use App\MoonShine\Resources\PageResource;
+use App\MoonShine\Resources\SeoDataResource;
 use MoonShine\ColorManager\ColorManager;
 use MoonShine\Contracts\ColorManager\ColorManagerContract;
-use MoonShine\Laravel\Components\Layout\{Locales, Notifications, Profile, Search};
-use MoonShine\UI\Components\{Breadcrumbs,
-    Components,
-    Layout\Flash,
-    Layout\Div,
-    Layout\Body,
-    Layout\Burger,
-    Layout\Content,
-    Layout\Footer,
-    Layout\Head,
-    Layout\Favicon,
-    Layout\Assets,
-    Layout\Meta,
-    Layout\Header,
-    Layout\Html,
-    Layout\Layout,
-    Layout\Logo,
-    Layout\Menu,
-    Layout\Sidebar,
-    Layout\ThemeSwitcher,
-    Layout\TopBar,
-    Layout\Wrapper,
-    When};
+use MoonShine\Laravel\Layouts\AppLayout;
+use MoonShine\MenuManager\MenuItem;
+use MoonShine\UI\Components\Layout\Layout;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -42,13 +25,21 @@ final class MoonShineLayout extends AppLayout
 
     protected function menu(): array
     {
+
         return [
+            MenuItem::make(
+                static fn () => __('SEO'),
+                SeoDataResource::class,
+            )->icon('chart-bar-square'),
+            MenuItem::make('Меню', MenuResource::class)->icon('bars-3-bottom-left'),
+            MenuItem::make('Страницы', PageResource::class)->icon('document-text'),
+            MenuItem::make('Контакты', ContactResource::class)->icon('chat-bubble-bottom-center-text'),
             ...parent::menu(),
         ];
     }
 
     /**
-     * @param ColorManager $colorManager
+     * @param  ColorManager  $colorManager
      */
     protected function colors(ColorManagerContract $colorManager): void
     {
