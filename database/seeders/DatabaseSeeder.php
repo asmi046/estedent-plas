@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             PriceSeederHir::class,
             PriceSeederOrto::class,
             PriceSeederRengen::class,
-
+            UserSeeder::class,
         ]);
 
         // User::factory(10)->create();
