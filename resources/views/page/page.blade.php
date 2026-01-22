@@ -1,7 +1,10 @@
 @extends('layouts.all')
 
 @section('main')
-    <h1></h1>
-
+    <x-headers.page-header title="{{ $page['title'] }}"></x-headers.page-header>
+    <section class="page_section">
+        <div class="container text_styles">
+            {!! $page['description'] !!}
+        </div>
+    </section>
 @endsection
-

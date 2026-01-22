@@ -13,6 +13,13 @@ use MoonShine\Contracts\ColorManager\ColorManagerContract;
 use MoonShine\Laravel\Layouts\AppLayout;
 use MoonShine\MenuManager\MenuItem;
 use MoonShine\UI\Components\Layout\Layout;
+use App\MoonShine\Resources\AdvantageResource;
+use App\MoonShine\Resources\BannerResource;
+use App\MoonShine\Resources\ControlOrganizationResource;
+use App\MoonShine\Resources\LegalDocumentResource;
+use App\MoonShine\Resources\PriceResource;
+use App\MoonShine\Resources\ServiceResource;
+use App\MoonShine\Resources\SpecialistResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -35,6 +42,13 @@ final class MoonShineLayout extends AppLayout
             MenuItem::make('Страницы', PageResource::class)->icon('document-text'),
             MenuItem::make('Контакты', ContactResource::class)->icon('chat-bubble-bottom-center-text'),
             ...parent::menu(),
+            MenuItem::make('Advantages', AdvantageResource::class),
+            MenuItem::make('Banners', BannerResource::class),
+            MenuItem::make('ControlOrganizations', ControlOrganizationResource::class),
+            MenuItem::make('LegalDocuments', LegalDocumentResource::class),
+            MenuItem::make('Prices', PriceResource::class),
+            MenuItem::make('Services', ServiceResource::class),
+            MenuItem::make('Specialists', SpecialistResource::class),
         ];
     }
 
