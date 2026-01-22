@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             PriceSeederOrto::class,
             PriceSeederRengen::class,
             UserSeeder::class,
+            LegalDocumentSeeder::class,
         ]);
 
         // User::factory(10)->create();
