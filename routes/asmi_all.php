@@ -25,3 +25,9 @@ Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts');
 Route::get('/sales', [IndexController::class, 'sales'])->name('sales');
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 Route::get('/services/{slug}', [ServiceController::class, 'page'])->name('services.page');
+
+Route::get('/cache_clear', function () {
+    Artisan::call('optimize:clear');
+
+    return Redirect::back()->with('msg', 'Кеш сброшен');
+})->name('cache_clear');

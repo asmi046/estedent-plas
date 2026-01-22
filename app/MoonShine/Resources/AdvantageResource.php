@@ -4,14 +4,15 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Resources;
 
-use Illuminate\Database\Eloquent\Model;
 use App\Models\Advantage;
-
+use MoonShine\Contracts\UI\ComponentContract;
+use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Laravel\Resources\ModelResource;
 use MoonShine\UI\Components\Layout\Box;
 use MoonShine\UI\Fields\ID;
-use MoonShine\Contracts\UI\FieldContract;
-use MoonShine\Contracts\UI\ComponentContract;
+use MoonShine\UI\Fields\Number;
+use MoonShine\UI\Fields\Text;
+use MoonShine\UI\Fields\TinyMce;
 
 /**
  * @extends ModelResource<Advantage>
@@ -20,15 +21,18 @@ class AdvantageResource extends ModelResource
 {
     protected string $model = Advantage::class;
 
-    protected string $title = 'Advantages';
-    
+    protected string $title = 'Преимущества';
+
+    protected string $column = 'title';
+
     /**
      * @return list<FieldContract>
      */
     protected function indexFields(): iterable
     {
         return [
-            ID::make()->sortable(),
+            Text::make('Название', 'title'),
+            Number::make('Порядок', 'sort_order')->sortable(),
         ];
     }
 
@@ -40,7 +44,11 @@ class AdvantageResource extends ModelResource
         return [
             Box::make([
                 ID::make(),
-            ])
+                Text::make('Название', 'title'),
+                TinyMce::make('Описание', 'description'),
+                Text::make('Иконка', 'icon'),
+                Number::make('Порядок', 'sort_order'),
+            ]),
         ];
     }
 
@@ -51,17 +59,33 @@ class AdvantageResource extends ModelResource
     {
         return [
             ID::make(),
+            Text::make('Название', 'title'),
+            TinyMce::make('Описание', 'description'),
+            Text::make('Иконка', 'icon'),
+            Number::make('Порядок', 'sort_order'),
         ];
     }
 
     /**
-     * @param Advantage $item
-     *
+     * @param  Advantage  $item
      * @return array<string, string[]|string>
+     *
      * @see https://laravel.com/docs/validation#available-validation-rules
      */
     protected function rules(mixed $item): array
     {
-        return [];
+        return [
+            'title' => ['required', 'string', 'max:100'],
+            'description' => ['required', 'string'],
+            'icon' => ['required', 'string', 'max:500'],
+            'sort_order' => ['required', 'integer'],
+        ];
+    }
+
+    protected function filters(): iterable
+    {
+        return [
+            Text::make('Название', 'title'),
+        ];
     }
 }
