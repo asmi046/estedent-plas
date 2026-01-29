@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -17,9 +16,9 @@ class SpecialistSeeder extends Seeder
     {
         // Копирование сертификатов в хранилище
         $certs = [
-            'bokareva_anastasia_1.jpg', 'bokoreva_1.png', 'bokoreva_2.png', 'bokorev_1.png',
-            'bokorev_2.png', 'bokorev_3.png', 'bokorev_4.png', 'chebotaev_1.png',
-            'kozakova_1.png', 'shugaev_1.png', 'zadorozgnaya_1.png'
+            'bokareva_anastasia_1.webp', 'bokoreva_1.webp', 'bokoreva_2.webp', 'bokorev_1.webp',
+            'bokorev_2.webp', 'bokorev_3.webp', 'bokorev_4.webp', 'chebotaev_1.webp', 'chebotaev_2.webp',
+            'kozakova_1.webp', 'shugaev_1.webp', 'zadorozgnaya_1.webp',
         ];
 
         foreach ($certs as $cert) {
@@ -35,7 +34,7 @@ class SpecialistSeeder extends Seeder
             'aluntieva.webp', 'bokarev.webp', 'bokareva.webp', 'bokareva_anastasia.webp',
             'bokarev_artur.webp', 'chebotaev.webp', 'isaeva.webp', 'kanisheeva.webp',
             'kazakova.webp', 'leonova.webp', 'sherbina.webp', 'shugaev.webp',
-            'tupalov.webp', 'vlasova.webp', 'zadoroznaya.webp'
+            'tupalov.webp', 'vlasova.webp', 'zadoroznaya.webp', 'new_doctor.webp',
         ];
 
         foreach ($photos as $photo) {
@@ -45,8 +44,6 @@ class SpecialistSeeder extends Seeder
                 'public'
             );
         }
-
-
 
         $sp_data = [
             [
@@ -130,7 +127,10 @@ class SpecialistSeeder extends Seeder
                 'position' => 'врач-стоматолог-ортопед',
                 'description' => '',
                 'sort_order' => 70,
-                'certificates' => json_encode(['specialists/chebotaev_1.png']),
+                'certificates' => json_encode([
+                    'specialists/chebotaev_1.webp',
+                    'specialists/chebotaev_2.webp',
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -226,13 +226,13 @@ class SpecialistSeeder extends Seeder
         foreach ($sp_data as $data) {
             $pageId = DB::table('specialists')->insertGetId($data);
 
-            DB::table("seo_data")->insert(
+            DB::table('seo_data')->insert(
                 [
                     'url' => 'specialists/'.$data['slug'],
-                    'seo_title' => $data['fio']. ", записаться на прием в Курске",
-                    'seo_description' => $data['fio']. ", записаться на прием в Курске в клинике  Эстедент Плюс",
+                    'seo_title' => $data['fio'].', записаться на прием в Курске',
+                    'seo_description' => $data['fio'].', записаться на прием в Курске в клинике  Эстедент Плюс',
                     'seoable_id' => $pageId,
-                    'seoable_type' => "App\Models\Specialist"
+                    'seoable_type' => "App\Models\Specialist",
                 ]
             );
         }

@@ -12,11 +12,22 @@
     }
 
     a {
-        color:$main_color;
+        color: $main_color;
     }
 
     .label {
         color: $gray_border_color;
+    }
+}
+
+.legal_documents_list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 20px;
+
+    a:hover {
+        color: $main_color;
     }
 }
 

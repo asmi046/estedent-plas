@@ -3,9 +3,7 @@
 namespace Database\Seeders;
 
 use DB;
-use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class MenuSeeder extends Seeder
 {
@@ -19,123 +17,128 @@ class MenuSeeder extends Seeder
                 'menu_name' => 'Главное меню',
                 'title' => 'Услуги',
                 'order' => 1,
-                'lnk' => "/services",
+                'lnk' => '/services',
             ],
             [
                 'menu_name' => 'Главное меню',
                 'title' => 'Специалисты',
                 'order' => 2,
-                'lnk' => "/specialists",
+                'lnk' => '/specialists',
             ],
             [
                 'menu_name' => 'Главное меню',
                 'title' => 'Цены',
                 'order' => 3,
-                'lnk' => "/prices",
+                'lnk' => '/prices',
             ],
             [
                 'menu_name' => 'Главное меню',
                 'title' => 'Акции',
                 'order' => 4,
-                'lnk' => "/sales",
+                'lnk' => '/sales',
             ],
             [
                 'menu_name' => 'Главное меню',
                 'title' => 'Клиника',
                 'order' => 5,
-                'lnk' => "/about",
+                'lnk' => '/about',
             ],
             [
                 'menu_name' => 'Главное меню',
                 'title' => 'Контакты',
                 'order' => 6,
-                'lnk' => "/contacts",
-            ]
+                'lnk' => '/contacts',
+            ],
         ];
 
-        DB::table("menus")->insert($data);
+        DB::table('menus')->insert($data);
 
         $footer_menu = [
             [
                 'menu_name' => 'Меню в подвале',
                 'title' => 'Имплантация',
                 'order' => 1,
-                'lnk' => "#",
+                'lnk' => '#',
             ],
             [
                 'menu_name' => 'Меню в подвале',
                 'title' => 'Протезирование',
                 'order' => 2,
-                'lnk' => "#",
+                'lnk' => '#',
             ],
             [
                 'menu_name' => 'Меню в подвале',
                 'title' => 'Коронки',
                 'order' => 3,
-                'lnk' => "#",
+                'lnk' => '#',
             ],
             [
                 'menu_name' => 'Меню в подвале',
                 'title' => 'Лечение',
                 'order' => 4,
-                'lnk' => "#",
+                'lnk' => '#',
             ],
             [
                 'menu_name' => 'Меню в подвале',
                 'title' => 'Отбеливание',
                 'order' => 5,
-                'lnk' => "#",
+                'lnk' => '#',
             ],
             [
                 'menu_name' => 'Меню в подвале',
                 'title' => 'Хирургия',
                 'order' => 6,
-                'lnk' => "#",
+                'lnk' => '#',
             ],
         ];
 
-        DB::table("menus")->insert($footer_menu);
-
+        DB::table('menus')->insert($footer_menu);
 
         $footer_menu_2 = [
             [
                 'menu_name' => 'Главное меню в подвале',
                 'title' => 'Услуги',
                 'order' => 1,
-                'lnk' => "/services",
+                'lnk' => '/services',
             ],
             [
                 'menu_name' => 'Главное меню в подвале',
                 'title' => 'Специалисты',
                 'order' => 2,
-                'lnk' => "/specialists",
+                'lnk' => '/specialists',
             ],
             [
                 'menu_name' => 'Главное меню в подвале',
                 'title' => 'Цены',
                 'order' => 3,
-                'lnk' => "/prices",
+                'lnk' => '/prices',
             ],
             [
                 'menu_name' => 'Главное меню в подвале',
                 'title' => 'Акции',
                 'order' => 4,
-                'lnk' => "/sales",
+                'lnk' => '/sales',
             ],
             [
                 'menu_name' => 'Главное меню в подвале',
                 'title' => 'Клиника',
                 'order' => 5,
-                'lnk' => "/about",
+                'lnk' => '/about',
             ],
             [
                 'menu_name' => 'Главное меню в подвале',
                 'title' => 'Контакты',
                 'order' => 6,
-                'lnk' => "#",
-            ]
+                'lnk' => '/contacts',
+            ],
+            [
+                'menu_name' => 'Главное меню в подвале',
+                'title' => 'Правовая информация',
+                'order' => 7,
+                'lnk' => '/legal_documents',
+            ],
         ];
 
-        DB::table("menus")->insert($footer_menu_2);
+        DB::table('menus')->insert($footer_menu_2);
     }
 }
