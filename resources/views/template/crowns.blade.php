@@ -1,6 +1,6 @@
 @extends('layouts.all')
 
-@section('content')
+@section('main')
     <x-headers.page-header :title="$service->title"></x-headers.page-header>
 
     <x-services.text :service="$service"></x-services.text>
