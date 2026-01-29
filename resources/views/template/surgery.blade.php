@@ -1,13 +1,13 @@
 @extends('layouts.all')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Хирургия</h1>
-                <p>Сложные хирургические вмешательства в области стоматологии.</p>
-                <!-- Добавьте содержание здесь -->
-            </div>
-        </div>
-    </div>
+    <x-headers.page-header :title="$service->title"></x-headers.page-header>
+
+    <x-services.text :service="$service"></x-services.text>
+
+    <x-main.cta-phone></x-main.cta-phone>
+
+    <x-main.specialists></x-main.specialists>
+
+    <x-main.clinic></x-main.clinic>
 @endsection
