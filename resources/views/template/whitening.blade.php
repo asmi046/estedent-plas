@@ -5,6 +5,12 @@
 
     <x-services.text :service="$service"></x-services.text>
 
+    <x-services.title-description-card-input title="Что дает процедура отбеливания" key="Что дает процедура отбеливания"
+        :sections="$service->sections"></x-services.title-description-card-input>
+
+    <x-services.steps-input title="Как проходит процедура" key="Как проходит процедура"
+        :sections="$service->sections"></x-services.steps-input>
+
     <x-main.cta-phone></x-main.cta-phone>
 
     <x-main.specialists></x-main.specialists>
