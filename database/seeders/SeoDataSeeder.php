@@ -82,6 +82,14 @@ class SeoDataSeeder extends Seeder
                 // 'seoable_id' => 1,
                 // 'seoable_type' => "App\Models\Page"
             ],
+            [
+                'url' => '/services',
+                'seo_title' => 'Стоматологические услуги в Курске от клиники Эстедент Плюс',
+                'seo_description' => 'Специалисты нашей клиники предоставляют широкий спектр стоматологических услуг, включая терапевтическую, хирургическую, ортопедическую и эстетическую стоматологию.',
+                'page_title' => '',
+                // 'seoable_id' => 1,
+                // 'seoable_type' => "App\Models\Page"
+            ],
         ];
 
         DB::table('seo_data')->insert($data);

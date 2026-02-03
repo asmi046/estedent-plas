@@ -58,37 +58,37 @@ class MenuSeeder extends Seeder
                 'menu_name' => 'Меню в подвале',
                 'title' => 'Имплантация',
                 'order' => 1,
-                'lnk' => '#',
+                'lnk' => '/services/implantation',
             ],
             [
                 'menu_name' => 'Меню в подвале',
                 'title' => 'Протезирование',
                 'order' => 2,
-                'lnk' => '#',
+                'lnk' => '/services/prosthetics',
             ],
             [
                 'menu_name' => 'Меню в подвале',
                 'title' => 'Коронки',
                 'order' => 3,
-                'lnk' => '#',
+                'lnk' => '/services/crowns',
             ],
             [
                 'menu_name' => 'Меню в подвале',
                 'title' => 'Лечение',
                 'order' => 4,
-                'lnk' => '#',
+                'lnk' => '/services/treatment',
             ],
             [
                 'menu_name' => 'Меню в подвале',
                 'title' => 'Отбеливание',
                 'order' => 5,
-                'lnk' => '#',
+                'lnk' => '/services/whitening',
             ],
             [
                 'menu_name' => 'Меню в подвале',
                 'title' => 'Хирургия',
                 'order' => 6,
-                'lnk' => '#',
+                'lnk' => '/services/surgery',
             ],
         ];
 
