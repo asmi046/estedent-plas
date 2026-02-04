@@ -15,11 +15,12 @@
                     href="tel:+7{{ phone_format($contacts['phone']->value) }}">{{ $contacts['phone']->value }}</a>
                 <br>
                 <p>Адрес: <br>{{ $contacts['adress_2']->value }}<br>Время работы:
-                    <br>{{ $contacts['work_time']->value }}</p>
+                    <br>{{ $contacts['work_time']->value }}
+                </p>
                 <a class="phone"
                     href="tel:+7{{ phone_format($contacts['phone_2']->value) }}">{{ $contacts['phone_2']->value }}</a>
 
-                <a href="#consultation" class="button">Записаться на прием</a>
+                <a href="{{ route('contacts') }}" class="button">Контакты</a>
             </div>
             <div class="footer_col footer_col_3">
                 <x-menues.puncts name="Меню в подвале"></x-menues.puncts>

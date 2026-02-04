@@ -2,7 +2,7 @@
         <div class="container">
             <div class="header__logo">
                 <a href="{{ route('home') }}">
-                    <img src="{{ asset('img/logo.svg') }}" alt="{{ $contacts['site_name']->value }}" >
+                    <img src="{{ asset('img/logo.svg') }}" alt="{{ $contacts['site_name']->value }}">
                 </a>
             </div>
 
@@ -19,10 +19,12 @@
             </div>
             <div class="header__phone">
                 <a href="tel:+7{{ phone_format($contacts['phone']->value) }}">{{ $contacts['phone']->value }}</a>
+                <br>
+                <a href="tel:+7{{ phone_format($contacts['phone_2']->value) }}">{{ $contacts['phone_2']->value }}</a>
             </div>
-            <div class="header__button">
+            {{-- <div class="header__button">
                 <a href="#consultation" class="button">Записаться</a>
-            </div>
+            </div> --}}
         </div>
     </header>
 

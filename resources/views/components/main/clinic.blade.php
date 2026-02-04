@@ -33,7 +33,7 @@
 
                     </div>
 
-                    <a href="#consultation" class="button">Записаться на прием</a>
+                    <a href="{{ route('about') }}" class="button">О клинике</a>
                 </div>
             </div>
             <div class="clinic_bottom">

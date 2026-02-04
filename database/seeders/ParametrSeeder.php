@@ -72,6 +72,14 @@ class ParametrSeeder extends Seeder
                 'value' => null,
                 'img' => null,
             ],
+            [
+                'str_id' => 'cta_4',
+                'section' => 'CTA блок на главной',
+
+                'title' => '+7 (4712) 78-77-00',
+                'value' => null,
+                'img' => null,
+            ],
 
         ];
 
