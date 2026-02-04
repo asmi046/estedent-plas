@@ -22,8 +22,10 @@
                             <h2>Сертификаты</h2>
                             <div class="personal_page_certificates_items">
                                 @foreach ($specialist->certificates as $certificate)
-                                    <a href="{{ Storage::url($certificate) }}" class="personal_page_certificates_item" data-fancybox="gallery">
-                                        <img src="{{ Storage::url($certificate) }}" alt="Сертификат {{ $specialist->title }}">
+                                    <a href="{{ Storage::url($certificate) }}" class="personal_page_certificates_item"
+                                        data-fslightbox="gallery">
+                                        <img src="{{ Storage::url($certificate) }}"
+                                            alt="Сертификат {{ $specialist->title }}">
                                     </a>
                                 @endforeach
                             </div>

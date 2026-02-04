@@ -62,6 +62,11 @@ class LegalDocumentSeeder extends Seeder
                 'file' => 'pravila_povedenia_v_med_org.pdf',
                 'order' => 9,
             ],
+            [
+                'name' => 'СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ',
+                'file' => 'soglasie_na_obrabotku_pd.docx',
+                'order' => 9,
+            ],
             // Documents with external links
             [
                 'name' => 'ПОРЯДОК ПРЕДОСТАВЛЕНИЯ ПЛАТНЫХ УСЛУГ',
