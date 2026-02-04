@@ -23,3 +23,8 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+AuthType Basic
+AuthName "Private zone. Only for administrator!"
+AuthUserFile /home/c/cf785378/estedent_plas/public/.htpasswd
+require user admin

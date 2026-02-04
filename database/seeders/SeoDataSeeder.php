@@ -79,7 +79,7 @@ class SeoDataSeeder extends Seeder
                 'seo_title' => 'Правовая информация',
                 'seo_description' => 'Правовая информация',
                 'page_title' => '',
-                // 'seoable_id' => 1,
+                // 'seoable_id' => 1,npm
                 // 'seoable_type' => "App\Models\Page"
             ],
             [
