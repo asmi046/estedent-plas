@@ -75,7 +75,7 @@ class SeoDataSeeder extends Seeder
                 // 'seoable_type' => "App\Models\Page"
             ],
             [
-                'url' => '/legal_documents',
+                'url' => 'legal_documents',
                 'seo_title' => 'Правовая информация',
                 'seo_description' => 'Правовая информация',
                 'page_title' => '',
@@ -83,7 +83,7 @@ class SeoDataSeeder extends Seeder
                 // 'seoable_type' => "App\Models\Page"
             ],
             [
-                'url' => '/services',
+                'url' => 'services',
                 'seo_title' => 'Стоматологические услуги в Курске от клиники Эстедент плюс',
                 'seo_description' => 'Специалисты нашей клиники предоставляют широкий спектр стоматологических услуг, включая терапевтическую, хирургическую, ортопедическую и эстетическую стоматологию.',
                 'page_title' => '',
