@@ -2,10 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
-
 use DB;
+use Illuminate\Database\Seeder;
 
 class ContactSeeder extends Seeder
 {
@@ -14,12 +12,12 @@ class ContactSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table("contacts")->insert(
+        DB::table('contacts')->insert(
             [
                 [
                     'name' => 'site_name',
                     'title' => 'Имя сайта',
-                    'value' => 'Стоматология «Эстедент Плюс»',
+                    'value' => 'Стоматология «Эстедент плюс»',
                 ],
 
                 [
@@ -31,13 +29,13 @@ class ContactSeeder extends Seeder
                 [
                     'name' => 'phone',
                     'title' => 'Телефон',
-                    'value' => '+7 (4712) 78-77-00',
+                    'value' => '+7 (4712) 78-77-77',
                 ],
 
                 [
                     'name' => 'phone_2',
                     'title' => 'Телефон 2',
-                    'value' => '+7 (4712) 78-77-77',
+                    'value' => '+7 (4712) 78-77-00',
                 ],
                 [
                     'name' => 'phone_3',
@@ -78,7 +76,13 @@ class ContactSeeder extends Seeder
                 [
                     'name' => 'work_time',
                     'title' => 'Время работы',
-                    'value' => 'Пн-Пт 09:00 - 18:00 Сб 09:00 - 14:00',
+                    'value' => 'Пн-Пт 09:00 - 20:00 Сб 09:00 - 14:00',
+                ],
+
+                [
+                    'name' => 'work_time2',
+                    'title' => 'Время работы',
+                    'value' => 'Пн-Пт 09:00 - 20:00 Сб 09:00 - 18:00',
                 ],
 
                 [
@@ -104,7 +108,6 @@ class ContactSeeder extends Seeder
                     'title' => 'Лицензия',
                     'value' => 'ЛО-46-002143, от 22 мая 2019 г',
                 ],
-
 
                 [
                     'name' => 'licenzia_number',

@@ -4,9 +4,7 @@ namespace Database\Seeders;
 
 use DB;
 use Illuminate\Database\Seeder;
-
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class ParametrSeeder extends Seeder
 {
@@ -34,52 +32,50 @@ class ParametrSeeder extends Seeder
         $data = [
             [
                 'str_id' => 'main_1',
-                'section' => "Главный баннер",
+                'section' => 'Главный баннер',
 
-                'title' => "Стоматологическая клиника Эстедент плюс",
-                'value' => "Мы дарить вам здоровую и красивую улыбку, которая станет вашим пропуском в мир успеха и уверенности",
+                'title' => 'Стоматологическая клиника Эстедент плюс',
+                'value' => 'Мы дарить вам здоровую и красивую улыбку, которая станет вашим пропуском в мир успеха и уверенности',
                 'img' => null,
             ],
 
             [
                 'str_id' => 'main_2',
-                'section' => "Главный баннер",
+                'section' => 'Главный баннер',
 
-                'title' => "Список",
-                'value' => "<ul> <li>Передовые технологии и мастерство, отточенное временем</li> <li>Многолетняя репутация семейной стоматологии</li> <li>Опытные врачи со стажем 6-19 лет</li> </ul>",
+                'title' => 'Список',
+                'value' => '<ul> <li>Передовые технологии и мастерство, отточенное временем</li> <li>Многолетняя репутация семейной стоматологии</li> <li>Опытные врачи со стажем 6-19 лет</li> </ul>',
                 'img' => null,
             ],
 
             [
                 'str_id' => 'cta_1',
-                'section' => "CTA блок на главной",
+                'section' => 'CTA блок на главной',
 
-                'title' => "Подробная консультация и подбор плана лечения",
+                'title' => 'Подробная консультация и подбор плана лечения',
                 'value' => null,
                 'img' => null,
             ],
             [
                 'str_id' => 'cta_2',
-                'section' => "CTA блок на главной",
+                'section' => 'CTA блок на главной',
 
-                'title' => "Работаем для вас с 09:00-21:00",
+                'title' => 'Работаем для вас с 09:00-20:00',
                 'value' => null,
                 'img' => null,
             ],
             [
                 'str_id' => 'cta_3',
-                'section' => "CTA блок на главной",
+                'section' => 'CTA блок на главной',
 
-                'title' => "+7 (4712) 77-03-03",
+                'title' => '+7 (4712) 78-77-77',
                 'value' => null,
                 'img' => null,
             ],
 
         ];
 
-        DB::table("parametrs")->insert($data);
-
-
+        DB::table('parametrs')->insert($data);
 
     }
 }

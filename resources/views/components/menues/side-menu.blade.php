@@ -4,7 +4,7 @@
         <div class="inner_wrapper">
             {{-- <x-burger-icon class="active_force"></x-burger-icon> --}}
             <a href="{{ route('home') }}">
-                <img src="{{ asset('img/logo.svg') }}" alt="Эстедент Плюс">
+                <img src="{{ asset('img/logo.svg') }}" alt="Эстедент плюс">
             </a>
             <div class="main_menu_puncts">
                 <x-menues.puncts></x-menues.puncts>

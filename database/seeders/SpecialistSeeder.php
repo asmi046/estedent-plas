@@ -230,7 +230,7 @@ class SpecialistSeeder extends Seeder
                 [
                     'url' => 'specialists/'.$data['slug'],
                     'seo_title' => $data['fio'].', записаться на прием в Курске',
-                    'seo_description' => $data['fio'].', записаться на прием в Курске в клинике  Эстедент Плюс',
+                    'seo_description' => $data['fio'].', записаться на прием в Курске в клинике  Эстедент плюс',
                     'seoable_id' => $pageId,
                     'seoable_type' => "App\Models\Specialist",
                 ]

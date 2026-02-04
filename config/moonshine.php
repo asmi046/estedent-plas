@@ -18,7 +18,7 @@ use MoonShine\Laravel\Pages\LoginPage;
 use MoonShine\Laravel\Pages\ProfilePage;
 
 return [
-    'title' => env('MOONSHINE_TITLE', 'ЭстеДент Плюс'),
+    'title' => env('MOONSHINE_TITLE', 'Эстедент плюс'),
     'logo' => 'img/logo_ms.jpg',
     'logo_small' => 'img/logo_ms_mini.jpg',
 

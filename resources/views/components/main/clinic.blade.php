@@ -24,10 +24,13 @@
 
                     <div class="info">
                         <p>Адреса:</p>
-                        <p>{{ $contacts['adress']->value ?? 'г.Курск' }}</p>
-                        <p>{{ $contacts['adress_2']->value ?? 'г.Курск' }}</p>
+                        <p>{{ $contacts['adress']->value ?? 'г.Курск' }}, <br>время работы:
+                            {{ $contacts['work_time']->value ?? 'Ежедневно с 09:00-20:00' }}</p>
                         <hr>
-                        <p>{{ $contacts['work_time']->value ?? 'Ежедневно с 09:00-21:00' }}</p>
+                        <p>{{ $contacts['adress_2']->value ?? 'г.Курск' }}, <br>время работы:
+                            {{ $contacts['work_time2']->value ?? 'Ежедневно с 09:00-21:00' }}</p>
+
+
                     </div>
 
                     <a href="#consultation" class="button">Записаться на прием</a>
@@ -35,9 +38,9 @@
             </div>
             <div class="clinic_bottom">
                 @foreach ($galery as $item)
-                <div class="clinic_photo_item">
-                    <img src="{{ Storage::url($item->img) }}" alt="{{ $item->title }}">
-                </div>
+                    <div class="clinic_photo_item">
+                        <img src="{{ Storage::url($item->img) }}" alt="{{ $item->title }}">
+                    </div>
                 @endforeach
             </div>
         </div>

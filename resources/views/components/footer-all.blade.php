@@ -9,11 +9,15 @@
                 <x-bvi-btn></x-bvi-btn>
             </div>
             <div class="footer_col footer_col_2">
-                <p>Адрес: <br>{{ $contacts['adress']->value }}<br>Время работы: <br>{{ $contacts['work_time']->value }}</p>
-                <a class="phone" href="tel:+7{{ phone_format($contacts['phone']->value) }}">{{ $contacts['phone']->value }}</a>
+                <p>Адрес: <br>{{ $contacts['adress']->value }}<br>Время работы: <br>{{ $contacts['work_time']->value }}
+                </p>
+                <a class="phone"
+                    href="tel:+7{{ phone_format($contacts['phone']->value) }}">{{ $contacts['phone']->value }}</a>
                 <br>
-                <p>Адрес: <br>{{ $contacts['adress_2']->value }}<br>Время работы: <br>{{ $contacts['work_time']->value }}</p>
-                <a class="phone" href="tel:+7{{ phone_format($contacts['phone_2']->value) }}">{{ $contacts['phone_2']->value }}</a>
+                <p>Адрес: <br>{{ $contacts['adress_2']->value }}<br>Время работы:
+                    <br>{{ $contacts['work_time']->value }}</p>
+                <a class="phone"
+                    href="tel:+7{{ phone_format($contacts['phone_2']->value) }}">{{ $contacts['phone_2']->value }}</a>
 
                 <a href="#consultation" class="button">Записаться на прием</a>
             </div>
@@ -26,7 +30,7 @@
         </div>
         <div class="footer_bottom">
             <div class="footer_copy">
-                © ООО “Эстедент Плюс”
+                © ООО “Эстедент плюс”
             </div>
             <div class="footer_links">
                 <a href="/page/politika-v-oblasti-obrabotki-personalnyx-dannyx">Политика конфиденциальности</a>
