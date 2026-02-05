@@ -22,7 +22,8 @@
                         <div class="response">
                             @foreach ($items as $item)
                                 <div class="price_item">
-                                    <div class="service"><span class="code">{{ $item->service_code }}</span> <span class="name">{{ $item->service_name }}</span></div>
+                                    <div class="service"><span class="code">{{ $item->service_code }}</span> <span
+                                            class="name">{{ $item->service_name }}</span></div>
                                     <div class="dots"></div>
                                     <div class="price">{{ $item->price }} руб.</div>
                                 </div>
@@ -31,11 +32,14 @@
                     </details>
                 @endforeach
             </div>
-
+            <br>
+            <br>
+            <p>Оплата медицинских услуг производится наличным и безналичным расчетом в кассу ООО «Эстедент плюс» после
+                каждого приема, согласно действующего прейскуранта.</p>
         </div>
     </section>
 
+
     <x-main.cta-phone></x-main.cta-phone>
     <x-main.specialists></x-main.specialists>
-
 @endsection
