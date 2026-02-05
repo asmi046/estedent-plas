@@ -51,6 +51,8 @@ class SpecialistSeeder extends Seeder
                 'description' => '',
                 'sort_order' => 10,
                 'certificates' => json_encode([
+                    'specialists/bokorev_0.webp',
+                    'specialists/bokorev_00.webp',
                     // 'specialists/bokorev_1.webp',
                     // 'specialists/bokorev_2.webp',
                     // 'specialists/bokorev_3.webp',
@@ -67,6 +69,7 @@ class SpecialistSeeder extends Seeder
                 'description' => '',
                 'sort_order' => 20,
                 'certificates' => json_encode([
+                    'specialists/bokoreva_0.webp',
                     // 'specialists/bokoreva_1.webp',
                     // 'specialists/bokoreva_2.webp',
                 ]),
