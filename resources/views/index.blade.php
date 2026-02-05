@@ -1,8 +1,8 @@
 @extends('layouts.all')
 
 @php
-    $title = "";
-    $description = "";
+    $title = '';
+    $description = '';
 @endphp
 
 @section('title', $title)
@@ -24,8 +24,7 @@
 
     <x-main.specialists></x-main.specialists>
 
-    <x-main.cert></x-main.cert>
+    {{-- <x-main.cert></x-main.cert> --}}
 
 
 @endsection
-
