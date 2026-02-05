@@ -16,8 +16,23 @@ class SpecialistSeeder extends Seeder
     {
         // Копирование сертификатов в хранилище
         $certs = [
-            'bokareva_anastasia_1.webp', 'bokoreva_1.webp', 'bokoreva_2.webp', 'bokorev_1.webp',
-            'bokorev_2.webp', 'bokorev_3.webp', 'bokorev_4.webp', 'chebotaev_1.webp', 'chebotaev_2.webp', 'chebotaev_3.webp', 'sadoyan_0.webp', 'sadoyan_1.webp', 'sadoyan_2.webp', 'zadorozgnaya_2.webp'];
+            'bokareva_anastasia_1.webp',
+            'bokoreva_0.webp',
+            'bokoreva_1.webp',
+            'bokoreva_2.webp',
+            'bokorev_0.webp',
+            'bokorev_00.webp',
+            'bokorev_1.webp',
+            'bokorev_2.webp',
+            'bokorev_3.webp',
+            'bokorev_4.webp',
+            'chebotaev_1.webp',
+            'chebotaev_2.webp',
+            'chebotaev_3.webp',
+            'sadoyan_0.webp',
+            'sadoyan_1.webp',
+            'sadoyan_2.webp',
+            'zadorozgnaya_2.webp'];
 
         foreach ($certs as $cert) {
             Storage::disk('public')->put(
