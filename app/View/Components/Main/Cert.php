@@ -2,29 +2,25 @@
 
 namespace App\View\Components\Main;
 
+use App\Models\Certificate;
 use Closure;
-use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cache;
-use App\Models\Specialist as ModelsSpecialist;
+use Illuminate\View\Component;
 
 class Cert extends Component
 {
     public $certificates;
+
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
         $this->certificates = Cache::rememberForever('main_certificates', function () {
-            $all_specialists = ModelsSpecialist::orderBy('sort_order')->get();
-            $certs = [];
+            $all_certificates = Certificate::orderBy('sort_order')->get();
 
-            foreach ($all_specialists as $specialist) {
-                $certs = array_merge($certs, $specialist->certificates);
-            }
-
-            return $certs;
+            return $all_certificates;
         });
     }
 

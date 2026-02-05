@@ -17,6 +17,7 @@ class SpecialistSeeder extends Seeder
         // Копирование сертификатов в хранилище
         $certs = [
             'bokareva_anastasia_1.webp',
+            'bokorev_a_0.webp',
             'bokoreva_0.webp',
             'bokoreva_1.webp',
             'bokoreva_2.webp',
@@ -171,7 +172,9 @@ class SpecialistSeeder extends Seeder
                 'position' => 'Заведующий зуботехнической лаборатории.',
                 'description' => '',
                 'sort_order' => 90,
-                'certificates' => json_encode([]),
+                'certificates' => json_encode([
+                    'specialists/bokorev_a_0.webp',
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

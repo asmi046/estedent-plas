@@ -20,6 +20,7 @@ class ServiceSeeder extends Seeder
         Storage::disk('public')->put('services/serv_4.webp', file_get_contents(public_path('tmp_data/services/serv_4.webp')), 'public');
         Storage::disk('public')->put('services/serv_5.webp', file_get_contents(public_path('tmp_data/services/serv_5.webp')), 'public');
         Storage::disk('public')->put('services/serv_6.webp', file_get_contents(public_path('tmp_data/services/serv_6.webp')), 'public');
+        Storage::disk('public')->put('services/serv_kt.webp', file_get_contents(public_path('tmp_data/services/serv_kt.webp')), 'public');
 
         Storage::disk('public')->put('services/system_1.webp', file_get_contents(public_path('tmp_data/services/system_1.webp')), 'public');
         Storage::disk('public')->put('services/system_2.webp', file_get_contents(public_path('tmp_data/services/system_2.webp')), 'public');
@@ -57,30 +58,7 @@ class ServiceSeeder extends Seeder
                 'sections' => json_encode($implantation),
                 'description' => file_get_contents(public_path('tmp_data/services/implantation.html')),
             ],
-            [
-                'title' => 'Протезирование',
-                'short_title' => 'Протезирование',
-                'img' => 'services/serv_2.webp',
-                'slug' => 'prosthetics',
-                'template' => 'template.prosthetics',
-                'price' => 'от 10 000 ₽',
-                'time' => '1-2 недели',
-                'order' => 2,
-                'sections' => json_encode($prosthetics),
-                'description' => file_get_contents(public_path('tmp_data/services/prosthetics.html')),
-            ],
-            [
-                'title' => 'Коронки',
-                'short_title' => 'Коронки',
-                'img' => 'services/serv_3.webp',
-                'slug' => 'crowns',
-                'template' => 'template.crowns',
-                'price' => 'от 5 000 ₽',
-                'time' => '1-2 недели',
-                'order' => 3,
-                'sections' => json_encode($crowns),
-                'description' => file_get_contents(public_path('tmp_data/services/crowns.html')),
-            ],
+
             [
                 'title' => 'Терапия',
                 'short_title' => 'Терапия',
@@ -93,18 +71,56 @@ class ServiceSeeder extends Seeder
                 'sections' => json_encode($treatment),
                 'description' => file_get_contents(public_path('tmp_data/services/treatment.html')),
             ],
+
             [
-                'title' => 'Отбеливание',
-                'short_title' => 'Отбеливание',
-                'img' => 'services/serv_5.webp',
-                'slug' => 'whitening',
-                'template' => 'template.whitening',
-                'price' => 'от 5 000 ₽',
-                'time' => '1-2 часа',
-                'order' => 5,
-                'sections' => json_encode($whitening),
-                'description' => file_get_contents(public_path('tmp_data/services/whitening.html')),
+                'title' => 'Диагностика',
+                'short_title' => 'Диагностика',
+                'img' => 'services/serv_kt.webp',
+                'slug' => 'diagnostics',
+                'template' => 'template.diagnostics',
+                'price' => 'от 3 000 ₽',
+                'time' => '1-3 сеанса',
+                'order' => 4,
+                'sections' => json_encode([]),
+                'description' => '',
             ],
+            // [
+            //     'title' => 'Протезирование',
+            //     'short_title' => 'Протезирование',
+            //     'img' => 'services/serv_2.webp',
+            //     'slug' => 'prosthetics',
+            //     'template' => 'template.prosthetics',
+            //     'price' => 'от 10 000 ₽',
+            //     'time' => '1-2 недели',
+            //     'order' => 2,
+            //     'sections' => json_encode($prosthetics),
+            //     'description' => file_get_contents(public_path('tmp_data/services/prosthetics.html')),
+            // ],
+            // [
+            //     'title' => 'Коронки',
+            //     'short_title' => 'Коронки',
+            //     'img' => 'services/serv_3.webp',
+            //     'slug' => 'crowns',
+            //     'template' => 'template.crowns',
+            //     'price' => 'от 5 000 ₽',
+            //     'time' => '1-2 недели',
+            //     'order' => 3,
+            //     'sections' => json_encode($crowns),
+            //     'description' => file_get_contents(public_path('tmp_data/services/crowns.html')),
+            // ],
+
+            // [
+            //     'title' => 'Отбеливание',
+            //     'short_title' => 'Отбеливание',
+            //     'img' => 'services/serv_5.webp',
+            //     'slug' => 'whitening',
+            //     'template' => 'template.whitening',
+            //     'price' => 'от 5 000 ₽',
+            //     'time' => '1-2 часа',
+            //     'order' => 5,
+            //     'sections' => json_encode($whitening),
+            //     'description' => file_get_contents(public_path('tmp_data/services/whitening.html')),
+            // ],
 
         ];
 

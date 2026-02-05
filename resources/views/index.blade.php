@@ -24,7 +24,7 @@
 
     <x-main.specialists></x-main.specialists>
 
-    {{-- <x-main.cert></x-main.cert> --}}
+    <x-main.cert></x-main.cert>
 
 
 @endsection

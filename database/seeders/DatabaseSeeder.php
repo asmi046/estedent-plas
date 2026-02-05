@@ -32,6 +32,7 @@ class DatabaseSeeder extends Seeder
             PriceSeederRengen::class,
             UserSeeder::class,
             LegalDocumentSeeder::class,
+            CertificateSeeder::class,
         ]);
 
         // User::factory(10)->create();

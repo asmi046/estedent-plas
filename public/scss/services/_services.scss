@@ -9,7 +9,7 @@
 
     &_wrap {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
 
@@ -56,10 +56,11 @@
     .services {
         &_wrap {
             grid-template-columns: 1fr;
-            gap:10px;
+            gap: 10px;
         }
-        &_card{
-            h3{
+
+        &_card {
+            h3 {
                 min-width: auto;
                 width: 50%;
             }
