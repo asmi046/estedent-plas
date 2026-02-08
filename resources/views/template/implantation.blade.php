@@ -10,7 +10,7 @@
     <x-services.title-description-card-input title="Виды имплантации" key="Виды имплантации"
         :sections="$service->sections"></x-services.title-description-card-input>
     <x-services.image-description-card-input title="Какие системы имплантов мы используем" key="Системы имплантов"
-        :sections="$service->sections"></x-services.image-description-card-input>
+        :sections="$service->sections" countclass="incard2"></x-services.image-description-card-input>
 
 
     <x-services.steps-input title="Как проходит процедура" key="Как проходит процедура"

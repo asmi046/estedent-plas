@@ -1,10 +1,14 @@
-<section id="services-image-description-card" class="services-image-description-card">
+@props([
+    'countclass' => '',
+])
+
+<section id="services-image-description-card" class="services-image-description-card {{ $countclass }}">
     <div class="container">
         <h2>{{ $title ?? '' }}</h2>
 
         <div class="cards-grid">
             @isset($items)
-                @foreach($items as $item)
+                @foreach ($items as $item)
                     <div class="image-card">
                         @isset($item['img'])
                             <div class="image-card__img">
