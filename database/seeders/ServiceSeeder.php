@@ -21,10 +21,14 @@ class ServiceSeeder extends Seeder
         Storage::disk('public')->put('services/serv_5.webp', file_get_contents(public_path('tmp_data/services/serv_5.webp')), 'public');
         Storage::disk('public')->put('services/serv_6.webp', file_get_contents(public_path('tmp_data/services/serv_6.webp')), 'public');
         Storage::disk('public')->put('services/serv_kt.webp', file_get_contents(public_path('tmp_data/services/serv_kt.webp')), 'public');
+        Storage::disk('public')->put('services/serv_lab.webp', file_get_contents(public_path('tmp_data/services/serv_lab.webp')), 'public');
 
         Storage::disk('public')->put('services/system_1.webp', file_get_contents(public_path('tmp_data/services/system_1.webp')), 'public');
         Storage::disk('public')->put('services/system_2.webp', file_get_contents(public_path('tmp_data/services/system_2.webp')), 'public');
         Storage::disk('public')->put('services/system_3.webp', file_get_contents(public_path('tmp_data/services/system_3.webp')), 'public');
+        Storage::disk('public')->put('services/lab_0.webp', file_get_contents(public_path('tmp_data/services/lab_0.webp')), 'public');
+        Storage::disk('public')->put('services/lab_1.webp', file_get_contents(public_path('tmp_data/services/lab_1.webp')), 'public');
+        Storage::disk('public')->put('services/lab_2.webp', file_get_contents(public_path('tmp_data/services/lab_2.webp')), 'public');
 
         include_once 'services/implantation.php';
         include_once 'services/prosthetics.php';
@@ -33,6 +37,7 @@ class ServiceSeeder extends Seeder
         include_once 'services/whitening.php';
         include_once 'services/surgery.php';
         include_once 'services/diagnostik.php';
+        include_once 'services/lab.php';
 
         $services = [
             [
@@ -96,6 +101,18 @@ class ServiceSeeder extends Seeder
                 'order' => 2,
                 'sections' => json_encode($prosthetics),
                 'description' => file_get_contents(public_path('tmp_data/services/prosthetics.html')),
+            ],
+            [
+                'title' => 'Зуботехническая лаборатория',
+                'short_title' => 'Зуботехническая лаборатория',
+                'img' => 'services/serv_lab.webp',
+                'slug' => 'dental-laboratory',
+                'template' => 'template.lab',
+                'price' => 'от 10 000 ₽',
+                'time' => '1-2 недели',
+                'order' => 2,
+                'sections' => json_encode($lab),
+                'description' => file_get_contents(public_path('tmp_data/services/lab.html')),
             ],
 
             // [
