@@ -32,6 +32,7 @@ class ServiceSeeder extends Seeder
         include_once 'services/treatment.php';
         include_once 'services/whitening.php';
         include_once 'services/surgery.php';
+        include_once 'services/diagnostik.php';
 
         $services = [
             [
@@ -81,8 +82,8 @@ class ServiceSeeder extends Seeder
                 'price' => 'от 3 000 ₽',
                 'time' => '1-3 сеанса',
                 'order' => 4,
-                'sections' => json_encode([]),
-                'description' => '',
+                'sections' => json_encode($diagnostik),
+                'description' => file_get_contents(public_path('tmp_data/services/diagnostik.html')),
             ],
             [
                 'title' => 'Ортопедия',
