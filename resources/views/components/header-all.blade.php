@@ -15,7 +15,8 @@
             </div>
 
             <div class="header__address">
-                Адрес: {{ $contacts['adress']->value }} <br>{{ $contacts['work_time']->value }}
+                {{ $contacts['adress']->value }} <br>{{ $contacts['adress_2']->value }}
+                <br>{{ $contacts['work_time']->value }}
             </div>
             <div class="header__phone">
                 <a href="tel:+7{{ phone_format($contacts['phone']->value) }}">{{ $contacts['phone']->value }}</a>

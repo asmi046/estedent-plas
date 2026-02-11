@@ -118,7 +118,7 @@ class SpecialistSeeder extends Seeder
                 'fio' => 'Бокарева Анастасия Федоровна',
                 'photo' => 'specialists/bokareva_anastasia.webp',
                 'slug' => Str::slug('Бокарева Анастасия Федоровна'),
-                'position' => 'Врач - стоматолог - общей практики.',
+                'position' => 'Врач - стоматолог общей практики.',
                 'description' => '',
                 'sort_order' => 50,
                 'certificates' => json_encode(['specialists/bokareva_anastasia_1.webp']),
