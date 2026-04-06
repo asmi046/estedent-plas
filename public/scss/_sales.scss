@@ -31,6 +31,37 @@
     }
 }
 
+.sales_page_wrap {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+    .img_part {
+        width: 30%;
+        min-width: 310px;
+        height: 200px;
+        border: 1px solid $main_color;
+        border-radius: 40px 0 40px 0;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content_part {
+        h1 {
+            margin-top: 0;
+        }
+    }
+}
+
+.sales__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
 @media (max-width: 768px) {
     .sales_list_wrap .sale_card_img {
         min-width: 300px;
@@ -51,6 +82,16 @@
         .sale_card_img {
             min-width: 300px;
             height: auto;
+        }
+    }
+
+    .sales_page_wrap {
+        flex-direction: column;
+
+        .img_part {
+            width: 100%;
+            height: auto;
+            display: flex;
         }
     }
 }

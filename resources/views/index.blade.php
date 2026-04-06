@@ -12,9 +12,12 @@
 
     <x-main.banner></x-main.banner>
 
+
     <x-main.advantages></x-main.advantages>
 
     <x-main.cta-phone></x-main.cta-phone>
+
+    <x-main.sales-list></x-main.sales-list>
 
 
     <x-main.services></x-main.services>
