@@ -1,7 +1,7 @@
 @extends('layouts.all')
 
 @php
-    $title = "Услуги нашей клиники";
+    $title = 'Услуги нашей клиники';
 @endphp
 
 
@@ -25,4 +25,3 @@
     <x-main.specialists></x-main.specialists>
     <x-main.cert></x-main.cert>
 @endsection
-

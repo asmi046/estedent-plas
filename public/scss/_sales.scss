@@ -1,0 +1,56 @@
+@use "vars" as *;
+
+.sales_list_wrap {
+    display: flex;
+
+    .sale_card {
+        display: flex;
+        gap: 30px;
+        overflow: hidden;
+        border: 1px solid $main_color;
+        border-radius: 40px 0 40px 0;
+        max-height: 250px;
+        &_img {
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    .sale_card_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+
+        button {
+            width: fit-content;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sales_list_wrap .sale_card_img {
+        min-width: 300px;
+        height: auto;
+    }
+}
+
+@media (max-width: 520px) {
+    .sales_list_wrap {
+        .sale_card {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .sale_card_info {
+            padding: 20px;
+        }
+        .sale_card_img {
+            min-width: 300px;
+            height: auto;
+        }
+    }
+}

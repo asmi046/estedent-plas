@@ -5,6 +5,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LegalDocumentController;
 use App\Http\Controllers\Page\PageController;
 use App\Http\Controllers\PriceController;
+use App\Http\Controllers\SalesController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SpecialistController;
 use Illuminate\Support\Facades\Route;
@@ -22,7 +23,8 @@ Route::get('/specialists/{slug}', [SpecialistController::class, 'show'])->name('
 Route::get('/prices', [PriceController::class, 'index'])->name('prices.index');
 
 Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts');
-Route::get('/sales', [IndexController::class, 'sales'])->name('sales');
+Route::get('/sales', [SalesController::class, 'index'])->name('sales');
+Route::get('/sales/{slug}', [SalesController::class, 'page'])->name('sales.page');
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 Route::get('/services/{slug}', [ServiceController::class, 'page'])->name('services.page');
 
