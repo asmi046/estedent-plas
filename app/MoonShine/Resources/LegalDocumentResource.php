@@ -9,6 +9,7 @@ use MoonShine\Contracts\UI\ComponentContract;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Laravel\Resources\ModelResource;
 use MoonShine\UI\Components\Layout\Box;
+use MoonShine\UI\Fields\File;
 use MoonShine\UI\Fields\ID;
 use MoonShine\UI\Fields\Number;
 use MoonShine\UI\Fields\Text;
@@ -45,7 +46,7 @@ class LegalDocumentResource extends ModelResource
                 ID::make(),
                 Text::make('Название', 'name'),
                 Number::make('Порядок', 'order'),
-                Text::make('Файл', 'file'),
+                File::make('Файл', 'file'),
                 Text::make('Ссылка', 'link'),
             ]),
         ];
@@ -60,7 +61,7 @@ class LegalDocumentResource extends ModelResource
             ID::make(),
             Text::make('Название', 'name'),
             Number::make('Порядок', 'order'),
-            Text::make('Файл', 'file'),
+            File::make('Файл', 'file')->dir('legal_documents')->removable(),
             Text::make('Ссылка', 'link'),
         ];
     }
@@ -76,6 +77,7 @@ class LegalDocumentResource extends ModelResource
         return [
             'name' => ['required', 'string', 'max:700'],
             'order' => ['required', 'integer'],
+            'file' => ['nullable', 'file', 'max:10240'],
         ];
     }
 
