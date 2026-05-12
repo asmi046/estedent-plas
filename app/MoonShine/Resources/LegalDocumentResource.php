@@ -46,7 +46,7 @@ class LegalDocumentResource extends ModelResource
                 ID::make(),
                 Text::make('Название', 'name'),
                 Number::make('Порядок', 'order'),
-                File::make('Файл', 'file'),
+                File::make('Файл', 'file')->dir('legal_documents')->removable(),
                 Text::make('Ссылка', 'link'),
             ]),
         ];
