@@ -58,6 +58,7 @@ class SpecialistResource extends ModelResource
                 Number::make('Порядок', 'sort_order'),
                 Json::make('Сертификаты', 'certificates')->fields([
                     Position::make(),
+                    Image::make('Изображение')->removable(),
                 ])->removable(),
             ]),
         ];
@@ -78,6 +79,7 @@ class SpecialistResource extends ModelResource
             Number::make('Порядок', 'sort_order'),
             Json::make('Сертификаты', 'certificates')->fields([
                 Position::make(),
+                Image::make('Изображение')->removable(),
             ])->removable(),
         ];
     }
