@@ -56,10 +56,10 @@ class SpecialistResource extends ModelResource
                 Text::make('Должность', 'position'),
                 TinyMce::make('Описание', 'description'),
                 Number::make('Порядок', 'sort_order'),
-                Json::make('Сертификаты', 'certificates')->fields([
-                    Position::make(),
+                Json::make('Сертификаты', 'certificates')->onlyValue(
+                    'Изображение',
                     Image::make('Изображение')->removable(),
-                ])->removable(),
+                )->removable(),
             ]),
         ];
     }
