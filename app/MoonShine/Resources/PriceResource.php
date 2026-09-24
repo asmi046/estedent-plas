@@ -30,8 +30,10 @@ class PriceResource extends ModelResource
     protected function indexFields(): iterable
     {
         return [
+            Text::make('Код услуги', 'service_code'),
             Text::make('Наименование услуги', 'service_name'),
             Text::make('Цена', 'price'),
+            Text::make('Раздел', 'section'),
             Number::make('Порядок вывода', 'sort_order')->sortable(),
         ];
     }
@@ -90,6 +92,7 @@ class PriceResource extends ModelResource
     {
         return [
             Text::make('Наименование услуги', 'service_name'),
+            Text::make('Раздел', 'section'),
         ];
     }
 }
