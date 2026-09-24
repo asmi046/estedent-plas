@@ -77,7 +77,7 @@ class CertificateResource extends ModelResource
         return [
             'name' => ['nullable', 'string', 'max:255'],
             'sort_order' => ['required', 'integer'],
-            'file' => ['required', 'string', 'max:700'],
+            'file' => [$item->exists ? 'sometimes' : 'required', 'image', 'max:5120'],
         ];
     }
 
