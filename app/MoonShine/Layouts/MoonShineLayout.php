@@ -13,6 +13,7 @@ use App\MoonShine\Resources\LegalDocumentResource;
 use App\MoonShine\Resources\MenuResource;
 use App\MoonShine\Resources\PageResource;
 use App\MoonShine\Resources\PriceResource;
+use App\MoonShine\Resources\SalesResource;
 use App\MoonShine\Resources\SeoDataResource;
 use App\MoonShine\Resources\ServiceResource;
 use App\MoonShine\Resources\SpecialistResource;
@@ -43,6 +44,7 @@ final class MoonShineLayout extends AppLayout
                 MenuItem::make('Услуги', ServiceResource::class),
                 MenuItem::make('Специалисты', SpecialistResource::class),
                 MenuItem::make('Сертификаты', CertificateResource::class),
+                MenuItem::make('Акции', SalesResource::class),
                 MenuItem::make(
                     static fn () => __('SEO'),
                     SeoDataResource::class,

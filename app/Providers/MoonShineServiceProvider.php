@@ -23,6 +23,7 @@ use App\MoonShine\Resources\PriceResource;
 use App\MoonShine\Resources\ServiceResource;
 use App\MoonShine\Resources\SpecialistResource;
 use App\MoonShine\Resources\CertificateResource;
+use App\MoonShine\Resources\SalesResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -48,6 +49,7 @@ class MoonShineServiceProvider extends ServiceProvider
                 ServiceResource::class,
                 SpecialistResource::class,
                 CertificateResource::class,
+                SalesResource::class,
             ])
             ->pages([
                 ...$config->getPages(),
