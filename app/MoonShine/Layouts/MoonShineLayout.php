@@ -6,6 +6,7 @@ namespace App\MoonShine\Layouts;
 
 use App\MoonShine\Resources\AdvantageResource;
 use App\MoonShine\Resources\BannerResource;
+use App\MoonShine\Resources\CertificateResource;
 use App\MoonShine\Resources\ContactResource;
 use App\MoonShine\Resources\ControlOrganizationResource;
 use App\MoonShine\Resources\LegalDocumentResource;
@@ -41,6 +42,7 @@ final class MoonShineLayout extends AppLayout
                 MenuItem::make('Цены', PriceResource::class),
                 MenuItem::make('Услуги', ServiceResource::class),
                 MenuItem::make('Специалисты', SpecialistResource::class),
+                MenuItem::make('Сертификаты', CertificateResource::class),
                 MenuItem::make(
                     static fn () => __('SEO'),
                     SeoDataResource::class,
